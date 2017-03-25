@@ -1,4 +1,4 @@
-package com.zhxp.web.controller;
+package com.zhxp.web.controller.web;
 
 
 import com.zhxp.web.entity.NewsInfo;
@@ -18,24 +18,7 @@ public class IndexController {
 	@Autowired
 	private NewService newService;
 
-	/**
-	 * Index
-	 * @param model
-	 * @param request
-	 */
-	@RequestMapping(value={"","/","index"})
-	public String index(Model model, HttpServletRequest request) {
-		String page = request.getParameter("page");
-		page = StringUtils.defaultIfBlank(page, "1");
-		int pageNumber = Integer.valueOf(page);
-		
-		int total = newService.findCount();
-		PageInfo<NewsInfo> pageInfo = new PageInfo<>(total, pageNumber);
-		pageInfo.setList(newService.findAll(pageInfo.getPageStart()));
-		
-		model.addAttribute("page", pageInfo);
-		return "index";
-	}
+
 	
 	/**
 	 * Detail

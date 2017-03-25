@@ -1,0 +1,345 @@
+2017-03-25 16:56:30,306  INFO Application:48 - Starting Application on zhuhao with PID 3336 (E:\project\XveJie\target\classes started by zhu in E:\project\XveJie)
+2017-03-25 16:56:30,311  INFO Application:641 - The following profiles are active: dev
+2017-03-25 16:56:30,526  INFO AnnotationConfigEmbeddedWebApplicationContext:582 - Refreshing org.springframework.boot.context.embedded.AnnotationConfigEmbeddedWebApplicationContext@5c072e3f: startup date [Sat Mar 25 16:56:30 CST 2017]; root of context hierarchy
+2017-03-25 16:56:31,639  INFO Version:30 - HV000001: Hibernate Validator 5.3.4.Final
+2017-03-25 16:56:33,298  INFO PostProcessorRegistrationDelegate$BeanPostProcessorChecker:325 - Bean 'org.springframework.transaction.annotation.ProxyTransactionManagementConfiguration' of type [org.springframework.transaction.annotation.ProxyTransactionManagementConfiguration$$EnhancerBySpringCGLIB$$a379188d] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+2017-03-25 16:56:34,313  INFO TomcatEmbeddedServletContainer:89 - Tomcat initialized with port(s): 8088 (http)
+2017-03-25 16:56:34,795  INFO ContextLoader:276 - Root WebApplicationContext: initialization completed in 4321 ms
+2017-03-25 16:56:34,828  INFO DruidConfiguration:30 - init Druid Servlet Configuration 
+2017-03-25 16:56:35,236  INFO ServletRegistrationBean:190 - Mapping servlet: 'statViewServlet' to [/druid/*]
+2017-03-25 16:56:35,238  INFO ServletRegistrationBean:190 - Mapping servlet: 'dispatcherServlet' to [/]
+2017-03-25 16:56:35,243  INFO FilterRegistrationBean:258 - Mapping filter: 'characterEncodingFilter' to: [/*]
+2017-03-25 16:56:35,244  INFO FilterRegistrationBean:258 - Mapping filter: 'hiddenHttpMethodFilter' to: [/*]
+2017-03-25 16:56:35,244  INFO FilterRegistrationBean:258 - Mapping filter: 'httpPutFormContentFilter' to: [/*]
+2017-03-25 16:56:35,244  INFO FilterRegistrationBean:258 - Mapping filter: 'requestContextFilter' to: [/*]
+2017-03-25 16:56:35,245  INFO FilterRegistrationBean:271 - Mapping filter: 'webStatFilter' to urls: [/*]
+2017-03-25 16:56:35,245  INFO FilterRegistrationBean:258 - Mapping filter: 'melody' to: [/*]
+2017-03-25 16:56:37,534  INFO RequestMappingHandlerMapping:543 - Mapped "{[ || / || /index]}" onto public java.lang.String com.zhxp.web.controller.web.IndexController.index(org.springframework.ui.Model,javax.servlet.http.HttpServletRequest)
+2017-03-25 16:56:37,536  INFO RequestMappingHandlerMapping:543 - Mapped "{[/detail/{id}]}" onto public java.lang.String com.zhxp.web.controller.web.IndexController.detail(org.springframework.ui.Model,int)
+2017-03-25 16:56:37,537  INFO RequestMappingHandlerMapping:543 - Mapped "{[/v2/api-docs],methods=[GET],produces=[application/json || application/hal+json]}" onto public org.springframework.http.ResponseEntity<springfox.documentation.spring.web.json.Json> springfox.documentation.swagger2.web.Swagger2Controller.getDocumentation(java.lang.String,javax.servlet.http.HttpServletRequest)
+2017-03-25 16:56:37,542  INFO RequestMappingHandlerMapping:543 - Mapped "{[/swagger-resources]}" onto org.springframework.http.ResponseEntity<java.util.List<springfox.documentation.swagger.web.SwaggerResource>> springfox.documentation.swagger.web.ApiResourceController.swaggerResources()
+2017-03-25 16:56:37,544  INFO RequestMappingHandlerMapping:543 - Mapped "{[/swagger-resources/configuration/ui]}" onto org.springframework.http.ResponseEntity<springfox.documentation.swagger.web.UiConfiguration> springfox.documentation.swagger.web.ApiResourceController.uiConfiguration()
+2017-03-25 16:56:37,545  INFO RequestMappingHandlerMapping:543 - Mapped "{[/swagger-resources/configuration/security]}" onto org.springframework.http.ResponseEntity<springfox.documentation.swagger.web.SecurityConfiguration> springfox.documentation.swagger.web.ApiResourceController.securityConfiguration()
+2017-03-25 16:56:37,548  INFO RequestMappingHandlerMapping:543 - Mapped "{[/error]}" onto public org.springframework.http.ResponseEntity<java.util.Map<java.lang.String, java.lang.Object>> org.springframework.boot.autoconfigure.web.BasicErrorController.error(javax.servlet.http.HttpServletRequest)
+2017-03-25 16:56:37,549  INFO RequestMappingHandlerMapping:543 - Mapped "{[/error],produces=[text/html]}" onto public org.springframework.web.servlet.ModelAndView org.springframework.boot.autoconfigure.web.BasicErrorController.errorHtml(javax.servlet.http.HttpServletRequest,javax.servlet.http.HttpServletResponse)
+2017-03-25 16:56:37,884  INFO RequestMappingHandlerAdapter:534 - Looking for @ControllerAdvice: org.springframework.boot.context.embedded.AnnotationConfigEmbeddedWebApplicationContext@5c072e3f: startup date [Sat Mar 25 16:56:30 CST 2017]; root of context hierarchy
+2017-03-25 16:56:37,960  INFO SimpleUrlHandlerMapping:362 - Mapped URL path [/webjars/**] onto handler of type [class org.springframework.web.servlet.resource.ResourceHttpRequestHandler]
+2017-03-25 16:56:37,961  INFO SimpleUrlHandlerMapping:362 - Mapped URL path [/**] onto handler of type [class org.springframework.web.servlet.resource.ResourceHttpRequestHandler]
+2017-03-25 16:56:38,034  INFO SimpleUrlHandlerMapping:362 - Mapped URL path [/**/favicon.ico] onto handler of type [class org.springframework.web.servlet.resource.ResourceHttpRequestHandler]
+2017-03-25 16:56:38,345  INFO FreeMarkerConfigurer:127 - ClassTemplateLoader for Spring macros added to FreeMarker configuration
+2017-03-25 16:56:38,565  INFO AnnotationMBeanExporter:431 - Registering beans for JMX exposure on startup
+2017-03-25 16:56:38,568  INFO AnnotationMBeanExporter:916 - Bean with name 'dataSource' has been autodetected for JMX exposure
+2017-03-25 16:56:38,574  INFO AnnotationMBeanExporter:671 - Located MBean 'dataSource': registering with JMX server as MBean [com.alibaba.druid.pool:name=dataSource,type=DruidDataSource]
+2017-03-25 16:56:38,591  INFO DefaultLifecycleProcessor:343 - Starting beans in phase 2147483647
+2017-03-25 16:56:38,591  INFO DocumentationPluginsBootstrapper:120 - Context refreshed
+2017-03-25 16:56:38,612  INFO DocumentationPluginsBootstrapper:123 - Found 1 custom documentation plugin(s)
+2017-03-25 16:56:38,623  INFO ApiListingReferenceScanner:41 - Scanning for api listing references
+2017-03-25 16:56:38,712  INFO TomcatEmbeddedServletContainer:198 - Tomcat started on port(s): 8088 (http)
+2017-03-25 16:56:38,718  INFO Application:57 - Started Application in 9.345 seconds (JVM running for 10.604)
+2017-03-25 16:57:01,312  INFO DispatcherServlet:489 - FrameworkServlet 'dispatcherServlet': initialization started
+2017-03-25 16:57:01,350  INFO DispatcherServlet:508 - FrameworkServlet 'dispatcherServlet': initialization completed in 37 ms
+2017-03-25 16:57:01,378  INFO WebConfiguration$MyInterceptor1:46 - remoteAddr=0:0:0:0:0:0:0:1 request=/xj/
+2017-03-25 16:57:01,549  INFO WebLogAspect:62 - {"Url":"http://localhost:8088/xj/","Param":"[{}, net.bull.javamelody.JspWrapper$HttpRequestWrapper3@24c7b73c]","Method":"GET","ip":"0:0:0:0:0:0:0:1","Class_Method":"com.zhxp.web.controller.web.IndexController.index"}
+2017-03-25 16:57:01,563  INFO WebLogAspect:62 - {"Url":"http://localhost:8088/xj/","Param":[],"Method":"GET","ip":"0:0:0:0:0:0:0:1","Class_Method":"com.zhxp.web.service.NewServiceImpl.findCount"}
+2017-03-25 16:57:01,570  INFO WebLogAspect:62 - {"Url":"http://localhost:8088/xj/","Param":[],"Method":"GET","ip":"0:0:0:0:0:0:0:1","Class_Method":"com.zhxp.web.mapper.NewsMapper.findCount"}
+2017-03-25 16:57:01,666  INFO DruidDataSource:715 - {dataSource-1} inited
+2017-03-25 16:57:02,541  INFO WebLogAspect:62 - {"Url":"http://localhost:8088/xj/","Param":[0],"Method":"GET","ip":"0:0:0:0:0:0:0:1","Class_Method":"com.zhxp.web.service.NewServiceImpl.findAll"}
+2017-03-25 16:57:02,542  INFO WebLogAspect:62 - {"Url":"http://localhost:8088/xj/","Param":[0],"Method":"GET","ip":"0:0:0:0:0:0:0:1","Class_Method":"com.zhxp.web.mapper.NewsMapper.findAll"}
+2017-03-25 16:57:03,084  INFO melody:66 - remoteAddr = 0:0:0:0:0:0:0:1, request = / GET: 1714 ms, 6 Ko
+2017-03-25 16:59:25,053  INFO WebConfiguration$MyInterceptor1:46 - remoteAddr=0:0:0:0:0:0:0:1 request=/xj/
+2017-03-25 16:59:25,055  INFO WebLogAspect:62 - {"Url":"http://localhost:8088/xj/","Param":"[{}, net.bull.javamelody.JspWrapper$HttpRequestWrapper3@4cb508f8]","Method":"GET","ip":"0:0:0:0:0:0:0:1","Class_Method":"com.zhxp.web.controller.web.IndexController.index"}
+2017-03-25 16:59:25,056  INFO WebLogAspect:62 - {"Url":"http://localhost:8088/xj/","Param":[],"Method":"GET","ip":"0:0:0:0:0:0:0:1","Class_Method":"com.zhxp.web.service.NewServiceImpl.findCount"}
+2017-03-25 16:59:25,056  INFO WebLogAspect:62 - {"Url":"http://localhost:8088/xj/","Param":[],"Method":"GET","ip":"0:0:0:0:0:0:0:1","Class_Method":"com.zhxp.web.mapper.NewsMapper.findCount"}
+2017-03-25 16:59:25,127  INFO WebLogAspect:62 - {"Url":"http://localhost:8088/xj/","Param":[0],"Method":"GET","ip":"0:0:0:0:0:0:0:1","Class_Method":"com.zhxp.web.service.NewServiceImpl.findAll"}
+2017-03-25 16:59:25,127  INFO WebLogAspect:62 - {"Url":"http://localhost:8088/xj/","Param":[0],"Method":"GET","ip":"0:0:0:0:0:0:0:1","Class_Method":"com.zhxp.web.mapper.NewsMapper.findAll"}
+2017-03-25 16:59:25,206  INFO melody:66 - remoteAddr = 0:0:0:0:0:0:0:1, request = / GET: 153 ms, 6 Ko
+2017-03-25 16:59:28,399  INFO WebConfiguration$MyInterceptor1:46 - remoteAddr=0:0:0:0:0:0:0:1 request=/xj/detail/6
+2017-03-25 16:59:28,429  INFO WebLogAspect:62 - {"Url":"http://localhost:8088/xj/detail/6","Param":[{},6],"Method":"GET","ip":"0:0:0:0:0:0:0:1","Class_Method":"com.zhxp.web.controller.web.IndexController.detail"}
+2017-03-25 16:59:28,430  INFO WebLogAspect:62 - {"Url":"http://localhost:8088/xj/detail/6","Param":[6],"Method":"GET","ip":"0:0:0:0:0:0:0:1","Class_Method":"com.zhxp.web.service.NewServiceImpl.findOne"}
+2017-03-25 16:59:28,431  INFO WebLogAspect:62 - {"Url":"http://localhost:8088/xj/detail/6","Param":[6],"Method":"GET","ip":"0:0:0:0:0:0:0:1","Class_Method":"com.zhxp.web.mapper.NewsMapper.findOne"}
+2017-03-25 16:59:28,492  INFO melody:66 - remoteAddr = 0:0:0:0:0:0:0:1, request = /detail/6 GET: 97 ms, 7 Ko
+2017-03-25 16:59:31,239  INFO WebConfiguration$MyInterceptor1:46 - remoteAddr=0:0:0:0:0:0:0:1 request=/xj/
+2017-03-25 16:59:31,240  INFO WebLogAspect:62 - {"Url":"http://localhost:8088/xj/","Param":"[{}, net.bull.javamelody.JspWrapper$HttpRequestWrapper3@6fb9f621]","Method":"GET","ip":"0:0:0:0:0:0:0:1","Class_Method":"com.zhxp.web.controller.web.IndexController.index"}
+2017-03-25 16:59:31,241  INFO WebLogAspect:62 - {"Url":"http://localhost:8088/xj/","Param":[],"Method":"GET","ip":"0:0:0:0:0:0:0:1","Class_Method":"com.zhxp.web.service.NewServiceImpl.findCount"}
+2017-03-25 16:59:31,242  INFO WebLogAspect:62 - {"Url":"http://localhost:8088/xj/","Param":[],"Method":"GET","ip":"0:0:0:0:0:0:0:1","Class_Method":"com.zhxp.web.mapper.NewsMapper.findCount"}
+2017-03-25 16:59:31,276  INFO WebLogAspect:62 - {"Url":"http://localhost:8088/xj/","Param":[0],"Method":"GET","ip":"0:0:0:0:0:0:0:1","Class_Method":"com.zhxp.web.service.NewServiceImpl.findAll"}
+2017-03-25 16:59:31,276  INFO WebLogAspect:62 - {"Url":"http://localhost:8088/xj/","Param":[0],"Method":"GET","ip":"0:0:0:0:0:0:0:1","Class_Method":"com.zhxp.web.mapper.NewsMapper.findAll"}
+2017-03-25 16:59:31,360  INFO melody:66 - remoteAddr = 0:0:0:0:0:0:0:1, request = / GET: 121 ms, 6 Ko
+2017-03-25 16:59:33,601  INFO WebConfiguration$MyInterceptor1:46 - remoteAddr=0:0:0:0:0:0:0:1 request=/xj/
+2017-03-25 16:59:33,602  INFO WebLogAspect:62 - {"Url":"http://localhost:8088/xj/","Param":"[{}, net.bull.javamelody.JspWrapper$HttpRequestWrapper3@39e13898]","Method":"GET","ip":"0:0:0:0:0:0:0:1","Class_Method":"com.zhxp.web.controller.web.IndexController.index"}
+2017-03-25 16:59:33,603  INFO WebLogAspect:62 - {"Url":"http://localhost:8088/xj/","Param":[],"Method":"GET","ip":"0:0:0:0:0:0:0:1","Class_Method":"com.zhxp.web.service.NewServiceImpl.findCount"}
+2017-03-25 16:59:33,603  INFO WebLogAspect:62 - {"Url":"http://localhost:8088/xj/","Param":[],"Method":"GET","ip":"0:0:0:0:0:0:0:1","Class_Method":"com.zhxp.web.mapper.NewsMapper.findCount"}
+2017-03-25 16:59:33,638  INFO WebLogAspect:62 - {"Url":"http://localhost:8088/xj/","Param":[0],"Method":"GET","ip":"0:0:0:0:0:0:0:1","Class_Method":"com.zhxp.web.service.NewServiceImpl.findAll"}
+2017-03-25 16:59:33,638  INFO WebLogAspect:62 - {"Url":"http://localhost:8088/xj/","Param":[0],"Method":"GET","ip":"0:0:0:0:0:0:0:1","Class_Method":"com.zhxp.web.mapper.NewsMapper.findAll"}
+2017-03-25 16:59:33,719  INFO melody:66 - remoteAddr = 0:0:0:0:0:0:0:1, request = / GET: 118 ms, 6 Ko
+2017-03-25 17:00:31,654  INFO Application:48 - Starting Application on zhuhao with PID 1472 (E:\project\XveJie\target\classes started by zhu in E:\project\XveJie)
+2017-03-25 17:00:31,658  INFO Application:641 - The following profiles are active: dev
+2017-03-25 17:00:31,755  INFO AnnotationConfigEmbeddedWebApplicationContext:582 - Refreshing org.springframework.boot.context.embedded.AnnotationConfigEmbeddedWebApplicationContext@5c072e3f: startup date [Sat Mar 25 17:00:31 CST 2017]; root of context hierarchy
+2017-03-25 17:00:33,228  INFO Version:30 - HV000001: Hibernate Validator 5.3.4.Final
+2017-03-25 17:00:34,915  INFO PostProcessorRegistrationDelegate$BeanPostProcessorChecker:325 - Bean 'org.springframework.transaction.annotation.ProxyTransactionManagementConfiguration' of type [org.springframework.transaction.annotation.ProxyTransactionManagementConfiguration$$EnhancerBySpringCGLIB$$a379188d] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+2017-03-25 17:00:35,879  INFO TomcatEmbeddedServletContainer:89 - Tomcat initialized with port(s): 8088 (http)
+2017-03-25 17:00:36,301  INFO ContextLoader:276 - Root WebApplicationContext: initialization completed in 4550 ms
+2017-03-25 17:00:36,331  INFO DruidConfiguration:30 - init Druid Servlet Configuration 
+2017-03-25 17:00:36,788  INFO ServletRegistrationBean:190 - Mapping servlet: 'statViewServlet' to [/druid/*]
+2017-03-25 17:00:36,790  INFO ServletRegistrationBean:190 - Mapping servlet: 'dispatcherServlet' to [/]
+2017-03-25 17:00:36,795  INFO FilterRegistrationBean:258 - Mapping filter: 'characterEncodingFilter' to: [/*]
+2017-03-25 17:00:36,796  INFO FilterRegistrationBean:258 - Mapping filter: 'hiddenHttpMethodFilter' to: [/*]
+2017-03-25 17:00:36,796  INFO FilterRegistrationBean:258 - Mapping filter: 'httpPutFormContentFilter' to: [/*]
+2017-03-25 17:00:36,796  INFO FilterRegistrationBean:258 - Mapping filter: 'requestContextFilter' to: [/*]
+2017-03-25 17:00:36,796  INFO FilterRegistrationBean:271 - Mapping filter: 'webStatFilter' to urls: [/*]
+2017-03-25 17:00:36,797  INFO FilterRegistrationBean:258 - Mapping filter: 'melody' to: [/*]
+2017-03-25 17:00:38,924  INFO RequestMappingHandlerMapping:543 - Mapped "{[ || / || /index]}" onto public java.lang.String com.zhxp.web.controller.web.IndexController.index(org.springframework.ui.Model,javax.servlet.http.HttpServletRequest)
+2017-03-25 17:00:38,926  INFO RequestMappingHandlerMapping:543 - Mapped "{[/detail/{id}]}" onto public java.lang.String com.zhxp.web.controller.web.IndexController.detail(org.springframework.ui.Model,int)
+2017-03-25 17:00:38,927  INFO RequestMappingHandlerMapping:543 - Mapped "{[/v2/api-docs],methods=[GET],produces=[application/json || application/hal+json]}" onto public org.springframework.http.ResponseEntity<springfox.documentation.spring.web.json.Json> springfox.documentation.swagger2.web.Swagger2Controller.getDocumentation(java.lang.String,javax.servlet.http.HttpServletRequest)
+2017-03-25 17:00:38,931  INFO RequestMappingHandlerMapping:543 - Mapped "{[/swagger-resources/configuration/security]}" onto org.springframework.http.ResponseEntity<springfox.documentation.swagger.web.SecurityConfiguration> springfox.documentation.swagger.web.ApiResourceController.securityConfiguration()
+2017-03-25 17:00:38,932  INFO RequestMappingHandlerMapping:543 - Mapped "{[/swagger-resources]}" onto org.springframework.http.ResponseEntity<java.util.List<springfox.documentation.swagger.web.SwaggerResource>> springfox.documentation.swagger.web.ApiResourceController.swaggerResources()
+2017-03-25 17:00:38,934  INFO RequestMappingHandlerMapping:543 - Mapped "{[/swagger-resources/configuration/ui]}" onto org.springframework.http.ResponseEntity<springfox.documentation.swagger.web.UiConfiguration> springfox.documentation.swagger.web.ApiResourceController.uiConfiguration()
+2017-03-25 17:00:38,938  INFO RequestMappingHandlerMapping:543 - Mapped "{[/error]}" onto public org.springframework.http.ResponseEntity<java.util.Map<java.lang.String, java.lang.Object>> org.springframework.boot.autoconfigure.web.BasicErrorController.error(javax.servlet.http.HttpServletRequest)
+2017-03-25 17:00:38,941  INFO RequestMappingHandlerMapping:543 - Mapped "{[/error],produces=[text/html]}" onto public org.springframework.web.servlet.ModelAndView org.springframework.boot.autoconfigure.web.BasicErrorController.errorHtml(javax.servlet.http.HttpServletRequest,javax.servlet.http.HttpServletResponse)
+2017-03-25 17:00:39,254  INFO RequestMappingHandlerAdapter:534 - Looking for @ControllerAdvice: org.springframework.boot.context.embedded.AnnotationConfigEmbeddedWebApplicationContext@5c072e3f: startup date [Sat Mar 25 17:00:31 CST 2017]; root of context hierarchy
+2017-03-25 17:00:39,333  INFO SimpleUrlHandlerMapping:362 - Mapped URL path [/webjars/**] onto handler of type [class org.springframework.web.servlet.resource.ResourceHttpRequestHandler]
+2017-03-25 17:00:39,333  INFO SimpleUrlHandlerMapping:362 - Mapped URL path [/**] onto handler of type [class org.springframework.web.servlet.resource.ResourceHttpRequestHandler]
+2017-03-25 17:00:39,390  INFO SimpleUrlHandlerMapping:362 - Mapped URL path [/**/favicon.ico] onto handler of type [class org.springframework.web.servlet.resource.ResourceHttpRequestHandler]
+2017-03-25 17:00:39,738  INFO FreeMarkerConfigurer:127 - ClassTemplateLoader for Spring macros added to FreeMarker configuration
+2017-03-25 17:00:39,963  INFO AnnotationMBeanExporter:431 - Registering beans for JMX exposure on startup
+2017-03-25 17:00:39,965  INFO AnnotationMBeanExporter:916 - Bean with name 'dataSource' has been autodetected for JMX exposure
+2017-03-25 17:00:39,970  INFO AnnotationMBeanExporter:671 - Located MBean 'dataSource': registering with JMX server as MBean [com.alibaba.druid.pool:name=dataSource,type=DruidDataSource]
+2017-03-25 17:00:39,975  INFO DefaultLifecycleProcessor:343 - Starting beans in phase 2147483647
+2017-03-25 17:00:39,975  INFO DocumentationPluginsBootstrapper:120 - Context refreshed
+2017-03-25 17:00:40,007  INFO DocumentationPluginsBootstrapper:123 - Found 1 custom documentation plugin(s)
+2017-03-25 17:00:40,024  INFO ApiListingReferenceScanner:41 - Scanning for api listing references
+2017-03-25 17:00:40,132  INFO TomcatEmbeddedServletContainer:198 - Tomcat started on port(s): 8088 (http)
+2017-03-25 17:00:40,138  INFO Application:57 - Started Application in 8.96 seconds (JVM running for 9.575)
+2017-03-25 17:00:47,379  INFO DispatcherServlet:489 - FrameworkServlet 'dispatcherServlet': initialization started
+2017-03-25 17:00:47,433  INFO DispatcherServlet:508 - FrameworkServlet 'dispatcherServlet': initialization completed in 41 ms
+2017-03-25 17:00:47,467  INFO WebConfiguration$MyInterceptor1:46 - remoteAddr=0:0:0:0:0:0:0:1 request=/xj/
+2017-03-25 17:00:47,543  INFO WebLogAspect:62 - {"Url":"http://localhost:8088/xj/","Param":"[{}, net.bull.javamelody.JspWrapper$HttpRequestWrapper3@c3bb2f2]","Method":"GET","ip":"0:0:0:0:0:0:0:1","Class_Method":"com.zhxp.web.controller.web.IndexController.index"}
+2017-03-25 17:00:47,561  INFO WebLogAspect:62 - {"Url":"http://localhost:8088/xj/","Param":[],"Method":"GET","ip":"0:0:0:0:0:0:0:1","Class_Method":"com.zhxp.web.service.NewServiceImpl.findCount"}
+2017-03-25 17:00:47,570  INFO WebLogAspect:62 - {"Url":"http://localhost:8088/xj/","Param":[],"Method":"GET","ip":"0:0:0:0:0:0:0:1","Class_Method":"com.zhxp.web.mapper.NewsMapper.findCount"}
+2017-03-25 17:00:47,650  INFO DruidDataSource:715 - {dataSource-1} inited
+2017-03-25 17:00:48,271  INFO WebLogAspect:62 - {"Url":"http://localhost:8088/xj/","Param":[0],"Method":"GET","ip":"0:0:0:0:0:0:0:1","Class_Method":"com.zhxp.web.service.NewServiceImpl.findAll"}
+2017-03-25 17:00:48,272  INFO WebLogAspect:62 - {"Url":"http://localhost:8088/xj/","Param":[0],"Method":"GET","ip":"0:0:0:0:0:0:0:1","Class_Method":"com.zhxp.web.mapper.NewsMapper.findAll"}
+2017-03-25 17:01:01,682  INFO WebConfiguration$MyInterceptor1:46 - remoteAddr=0:0:0:0:0:0:0:1 request=/xj/
+2017-03-25 17:01:01,683  INFO WebLogAspect:62 - {"Url":"http://localhost:8088/xj/","Param":"[{}, net.bull.javamelody.JspWrapper$HttpRequestWrapper3@349f24b]","Method":"GET","ip":"0:0:0:0:0:0:0:1","Class_Method":"com.zhxp.web.controller.web.IndexController.index"}
+2017-03-25 17:01:01,684  INFO WebLogAspect:62 - {"Url":"http://localhost:8088/xj/","Param":[],"Method":"GET","ip":"0:0:0:0:0:0:0:1","Class_Method":"com.zhxp.web.service.NewServiceImpl.findCount"}
+2017-03-25 17:01:01,685  INFO WebLogAspect:62 - {"Url":"http://localhost:8088/xj/","Param":[],"Method":"GET","ip":"0:0:0:0:0:0:0:1","Class_Method":"com.zhxp.web.mapper.NewsMapper.findCount"}
+2017-03-25 17:01:01,719  INFO WebLogAspect:62 - {"Url":"http://localhost:8088/xj/","Param":[0],"Method":"GET","ip":"0:0:0:0:0:0:0:1","Class_Method":"com.zhxp.web.service.NewServiceImpl.findAll"}
+2017-03-25 17:01:01,719  INFO WebLogAspect:62 - {"Url":"http://localhost:8088/xj/","Param":[0],"Method":"GET","ip":"0:0:0:0:0:0:0:1","Class_Method":"com.zhxp.web.mapper.NewsMapper.findAll"}
+2017-03-25 17:01:05,725  INFO WebConfiguration$MyInterceptor1:46 - remoteAddr=0:0:0:0:0:0:0:1 request=/xj/
+2017-03-25 17:01:05,726  INFO WebLogAspect:62 - {"Url":"http://localhost:8088/xj/","Param":"[{}, net.bull.javamelody.JspWrapper$HttpRequestWrapper3@1db8a17d]","Method":"GET","ip":"0:0:0:0:0:0:0:1","Class_Method":"com.zhxp.web.controller.web.IndexController.index"}
+2017-03-25 17:01:05,727  INFO WebLogAspect:62 - {"Url":"http://localhost:8088/xj/","Param":[],"Method":"GET","ip":"0:0:0:0:0:0:0:1","Class_Method":"com.zhxp.web.service.NewServiceImpl.findCount"}
+2017-03-25 17:01:05,728  INFO WebLogAspect:62 - {"Url":"http://localhost:8088/xj/","Param":[],"Method":"GET","ip":"0:0:0:0:0:0:0:1","Class_Method":"com.zhxp.web.mapper.NewsMapper.findCount"}
+2017-03-25 17:01:05,762  INFO WebLogAspect:62 - {"Url":"http://localhost:8088/xj/","Param":[0],"Method":"GET","ip":"0:0:0:0:0:0:0:1","Class_Method":"com.zhxp.web.service.NewServiceImpl.findAll"}
+2017-03-25 17:01:05,762  INFO WebLogAspect:62 - {"Url":"http://localhost:8088/xj/","Param":[0],"Method":"GET","ip":"0:0:0:0:0:0:0:1","Class_Method":"com.zhxp.web.mapper.NewsMapper.findAll"}
+2017-03-25 17:12:34,892  INFO WebConfiguration$MyInterceptor1:46 - remoteAddr=0:0:0:0:0:0:0:1 request=/xj/detail/3
+2017-03-25 17:12:34,899  INFO WebLogAspect:62 - {"Url":"http://localhost:8088/xj/detail/3","Param":[{},3],"Method":"GET","ip":"0:0:0:0:0:0:0:1","Class_Method":"com.zhxp.web.controller.web.IndexController.detail"}
+2017-03-25 17:12:34,900  INFO WebLogAspect:62 - {"Url":"http://localhost:8088/xj/detail/3","Param":[3],"Method":"GET","ip":"0:0:0:0:0:0:0:1","Class_Method":"com.zhxp.web.service.NewServiceImpl.findOne"}
+2017-03-25 17:12:34,901  INFO WebLogAspect:62 - {"Url":"http://localhost:8088/xj/detail/3","Param":[3],"Method":"GET","ip":"0:0:0:0:0:0:0:1","Class_Method":"com.zhxp.web.mapper.NewsMapper.findOne"}
+2017-03-25 17:12:42,232  INFO WebConfiguration$MyInterceptor1:46 - remoteAddr=0:0:0:0:0:0:0:1 request=/xj/detail/3
+2017-03-25 17:12:42,233  INFO WebLogAspect:62 - {"Url":"http://localhost:8088/xj/detail/3","Param":[{},3],"Method":"GET","ip":"0:0:0:0:0:0:0:1","Class_Method":"com.zhxp.web.controller.web.IndexController.detail"}
+2017-03-25 17:12:42,234  INFO WebLogAspect:62 - {"Url":"http://localhost:8088/xj/detail/3","Param":[3],"Method":"GET","ip":"0:0:0:0:0:0:0:1","Class_Method":"com.zhxp.web.service.NewServiceImpl.findOne"}
+2017-03-25 17:12:42,234  INFO WebLogAspect:62 - {"Url":"http://localhost:8088/xj/detail/3","Param":[3],"Method":"GET","ip":"0:0:0:0:0:0:0:1","Class_Method":"com.zhxp.web.mapper.NewsMapper.findOne"}
+2017-03-25 17:14:25,096  INFO Application:48 - Starting Application on zhuhao with PID 1412 (E:\project\XveJie\target\classes started by zhu in E:\project\XveJie)
+2017-03-25 17:14:25,099  INFO Application:641 - The following profiles are active: dev
+2017-03-25 17:14:25,180  INFO AnnotationConfigEmbeddedWebApplicationContext:582 - Refreshing org.springframework.boot.context.embedded.AnnotationConfigEmbeddedWebApplicationContext@5c072e3f: startup date [Sat Mar 25 17:14:25 CST 2017]; root of context hierarchy
+2017-03-25 17:14:26,008  INFO Version:30 - HV000001: Hibernate Validator 5.3.4.Final
+2017-03-25 17:14:28,197  INFO PostProcessorRegistrationDelegate$BeanPostProcessorChecker:325 - Bean 'org.springframework.transaction.annotation.ProxyTransactionManagementConfiguration' of type [org.springframework.transaction.annotation.ProxyTransactionManagementConfiguration$$EnhancerBySpringCGLIB$$a379188d] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+2017-03-25 17:14:29,292  INFO TomcatEmbeddedServletContainer:89 - Tomcat initialized with port(s): 8088 (http)
+2017-03-25 17:14:29,732  INFO ContextLoader:276 - Root WebApplicationContext: initialization completed in 4556 ms
+2017-03-25 17:14:29,766  INFO DruidConfiguration:30 - init Druid Servlet Configuration 
+2017-03-25 17:14:30,153  INFO ServletRegistrationBean:190 - Mapping servlet: 'statViewServlet' to [/druid/*]
+2017-03-25 17:14:30,156  INFO ServletRegistrationBean:190 - Mapping servlet: 'dispatcherServlet' to [/]
+2017-03-25 17:14:30,160  INFO FilterRegistrationBean:258 - Mapping filter: 'characterEncodingFilter' to: [/*]
+2017-03-25 17:14:30,161  INFO FilterRegistrationBean:258 - Mapping filter: 'hiddenHttpMethodFilter' to: [/*]
+2017-03-25 17:14:30,161  INFO FilterRegistrationBean:258 - Mapping filter: 'httpPutFormContentFilter' to: [/*]
+2017-03-25 17:14:30,163  INFO FilterRegistrationBean:258 - Mapping filter: 'requestContextFilter' to: [/*]
+2017-03-25 17:14:30,163  INFO FilterRegistrationBean:271 - Mapping filter: 'webStatFilter' to urls: [/*]
+2017-03-25 17:14:30,164  INFO FilterRegistrationBean:258 - Mapping filter: 'melody' to: [/*]
+2017-03-25 17:14:32,273  INFO RequestMappingHandlerMapping:543 - Mapped "{[ || / || /index]}" onto public java.lang.String com.zhxp.web.controller.web.IndexController.index(org.springframework.ui.Model,javax.servlet.http.HttpServletRequest)
+2017-03-25 17:14:32,274  INFO RequestMappingHandlerMapping:543 - Mapped "{[/detail/{id}]}" onto public java.lang.String com.zhxp.web.controller.web.IndexController.detail(org.springframework.ui.Model,int)
+2017-03-25 17:14:32,275  INFO RequestMappingHandlerMapping:543 - Mapped "{[/v2/api-docs],methods=[GET],produces=[application/json || application/hal+json]}" onto public org.springframework.http.ResponseEntity<springfox.documentation.spring.web.json.Json> springfox.documentation.swagger2.web.Swagger2Controller.getDocumentation(java.lang.String,javax.servlet.http.HttpServletRequest)
+2017-03-25 17:14:32,279  INFO RequestMappingHandlerMapping:543 - Mapped "{[/swagger-resources/configuration/security]}" onto org.springframework.http.ResponseEntity<springfox.documentation.swagger.web.SecurityConfiguration> springfox.documentation.swagger.web.ApiResourceController.securityConfiguration()
+2017-03-25 17:14:32,280  INFO RequestMappingHandlerMapping:543 - Mapped "{[/swagger-resources]}" onto org.springframework.http.ResponseEntity<java.util.List<springfox.documentation.swagger.web.SwaggerResource>> springfox.documentation.swagger.web.ApiResourceController.swaggerResources()
+2017-03-25 17:14:32,281  INFO RequestMappingHandlerMapping:543 - Mapped "{[/swagger-resources/configuration/ui]}" onto org.springframework.http.ResponseEntity<springfox.documentation.swagger.web.UiConfiguration> springfox.documentation.swagger.web.ApiResourceController.uiConfiguration()
+2017-03-25 17:14:32,284  INFO RequestMappingHandlerMapping:543 - Mapped "{[/error]}" onto public org.springframework.http.ResponseEntity<java.util.Map<java.lang.String, java.lang.Object>> org.springframework.boot.autoconfigure.web.BasicErrorController.error(javax.servlet.http.HttpServletRequest)
+2017-03-25 17:14:32,285  INFO RequestMappingHandlerMapping:543 - Mapped "{[/error],produces=[text/html]}" onto public org.springframework.web.servlet.ModelAndView org.springframework.boot.autoconfigure.web.BasicErrorController.errorHtml(javax.servlet.http.HttpServletRequest,javax.servlet.http.HttpServletResponse)
+2017-03-25 17:14:32,617  INFO RequestMappingHandlerAdapter:534 - Looking for @ControllerAdvice: org.springframework.boot.context.embedded.AnnotationConfigEmbeddedWebApplicationContext@5c072e3f: startup date [Sat Mar 25 17:14:25 CST 2017]; root of context hierarchy
+2017-03-25 17:14:32,693  INFO SimpleUrlHandlerMapping:362 - Mapped URL path [/webjars/**] onto handler of type [class org.springframework.web.servlet.resource.ResourceHttpRequestHandler]
+2017-03-25 17:14:32,694  INFO SimpleUrlHandlerMapping:362 - Mapped URL path [/**] onto handler of type [class org.springframework.web.servlet.resource.ResourceHttpRequestHandler]
+2017-03-25 17:14:32,746  INFO SimpleUrlHandlerMapping:362 - Mapped URL path [/**/favicon.ico] onto handler of type [class org.springframework.web.servlet.resource.ResourceHttpRequestHandler]
+2017-03-25 17:14:33,175  INFO FreeMarkerConfigurer:127 - ClassTemplateLoader for Spring macros added to FreeMarker configuration
+2017-03-25 17:14:33,530  INFO AnnotationMBeanExporter:431 - Registering beans for JMX exposure on startup
+2017-03-25 17:14:33,535  INFO AnnotationMBeanExporter:916 - Bean with name 'dataSource' has been autodetected for JMX exposure
+2017-03-25 17:14:33,541  INFO AnnotationMBeanExporter:671 - Located MBean 'dataSource': registering with JMX server as MBean [com.alibaba.druid.pool:name=dataSource,type=DruidDataSource]
+2017-03-25 17:14:33,550  INFO DefaultLifecycleProcessor:343 - Starting beans in phase 2147483647
+2017-03-25 17:14:33,550  INFO DocumentationPluginsBootstrapper:120 - Context refreshed
+2017-03-25 17:14:33,583  INFO DocumentationPluginsBootstrapper:123 - Found 1 custom documentation plugin(s)
+2017-03-25 17:14:33,601  INFO ApiListingReferenceScanner:41 - Scanning for api listing references
+2017-03-25 17:14:33,684  INFO TomcatEmbeddedServletContainer:198 - Tomcat started on port(s): 8088 (http)
+2017-03-25 17:14:33,693  INFO Application:57 - Started Application in 9.059 seconds (JVM running for 9.536)
+2017-03-25 17:14:38,576  INFO DispatcherServlet:489 - FrameworkServlet 'dispatcherServlet': initialization started
+2017-03-25 17:14:38,641  INFO DispatcherServlet:508 - FrameworkServlet 'dispatcherServlet': initialization completed in 65 ms
+2017-03-25 17:14:38,775  INFO WebLogAspect:62 - {"Url":"http://localhost:8088/xj/detail/3","Param":[{},3],"Method":"GET","ip":"0:0:0:0:0:0:0:1","Class_Method":"com.zhxp.web.controller.web.IndexController.detail"}
+2017-03-25 17:14:38,795  INFO WebLogAspect:62 - {"Url":"http://localhost:8088/xj/detail/3","Param":[3],"Method":"GET","ip":"0:0:0:0:0:0:0:1","Class_Method":"com.zhxp.web.service.NewServiceImpl.findOne"}
+2017-03-25 17:14:38,804  INFO WebLogAspect:62 - {"Url":"http://localhost:8088/xj/detail/3","Param":[3],"Method":"GET","ip":"0:0:0:0:0:0:0:1","Class_Method":"com.zhxp.web.mapper.NewsMapper.findOne"}
+2017-03-25 17:14:38,878  INFO DruidDataSource:715 - {dataSource-1} inited
+2017-03-25 17:14:41,886  INFO WebLogAspect:62 - {"Url":"http://localhost:8088/xj/detail/3","Param":[{},3],"Method":"GET","ip":"0:0:0:0:0:0:0:1","Class_Method":"com.zhxp.web.controller.web.IndexController.detail"}
+2017-03-25 17:14:41,886  INFO WebLogAspect:62 - {"Url":"http://localhost:8088/xj/detail/3","Param":[3],"Method":"GET","ip":"0:0:0:0:0:0:0:1","Class_Method":"com.zhxp.web.service.NewServiceImpl.findOne"}
+2017-03-25 17:14:41,887  INFO WebLogAspect:62 - {"Url":"http://localhost:8088/xj/detail/3","Param":[3],"Method":"GET","ip":"0:0:0:0:0:0:0:1","Class_Method":"com.zhxp.web.mapper.NewsMapper.findOne"}
+2017-03-25 17:14:45,041  INFO WebLogAspect:62 - {"Url":"http://localhost:8088/xj/detail/3","Param":[{},3],"Method":"GET","ip":"0:0:0:0:0:0:0:1","Class_Method":"com.zhxp.web.controller.web.IndexController.detail"}
+2017-03-25 17:14:45,042  INFO WebLogAspect:62 - {"Url":"http://localhost:8088/xj/detail/3","Param":[3],"Method":"GET","ip":"0:0:0:0:0:0:0:1","Class_Method":"com.zhxp.web.service.NewServiceImpl.findOne"}
+2017-03-25 17:14:45,042  INFO WebLogAspect:62 - {"Url":"http://localhost:8088/xj/detail/3","Param":[3],"Method":"GET","ip":"0:0:0:0:0:0:0:1","Class_Method":"com.zhxp.web.mapper.NewsMapper.findOne"}
+2017-03-25 17:14:46,766  INFO WebLogAspect:62 - {"Url":"http://localhost:8088/xj/detail/3","Param":[{},3],"Method":"GET","ip":"0:0:0:0:0:0:0:1","Class_Method":"com.zhxp.web.controller.web.IndexController.detail"}
+2017-03-25 17:14:46,767  INFO WebLogAspect:62 - {"Url":"http://localhost:8088/xj/detail/3","Param":[3],"Method":"GET","ip":"0:0:0:0:0:0:0:1","Class_Method":"com.zhxp.web.service.NewServiceImpl.findOne"}
+2017-03-25 17:14:46,768  INFO WebLogAspect:62 - {"Url":"http://localhost:8088/xj/detail/3","Param":[3],"Method":"GET","ip":"0:0:0:0:0:0:0:1","Class_Method":"com.zhxp.web.mapper.NewsMapper.findOne"}
+2017-03-25 17:18:32,101  INFO Application:48 - Starting Application on zhuhao with PID 9632 (E:\project\XveJie\target\classes started by zhu in E:\project\XveJie)
+2017-03-25 17:18:32,104  INFO Application:641 - The following profiles are active: dev
+2017-03-25 17:18:32,197  INFO AnnotationConfigEmbeddedWebApplicationContext:582 - Refreshing org.springframework.boot.context.embedded.AnnotationConfigEmbeddedWebApplicationContext@5c072e3f: startup date [Sat Mar 25 17:18:32 CST 2017]; root of context hierarchy
+2017-03-25 17:18:33,115  INFO Version:30 - HV000001: Hibernate Validator 5.3.4.Final
+2017-03-25 17:18:34,913  INFO PostProcessorRegistrationDelegate$BeanPostProcessorChecker:325 - Bean 'org.springframework.transaction.annotation.ProxyTransactionManagementConfiguration' of type [org.springframework.transaction.annotation.ProxyTransactionManagementConfiguration$$EnhancerBySpringCGLIB$$5ec1ecb1] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+2017-03-25 17:18:35,729  INFO TomcatEmbeddedServletContainer:89 - Tomcat initialized with port(s): 8088 (http)
+2017-03-25 17:18:36,123  INFO ContextLoader:276 - Root WebApplicationContext: initialization completed in 3930 ms
+2017-03-25 17:18:36,151  INFO DruidConfiguration:30 - init Druid Servlet Configuration 
+2017-03-25 17:18:36,939  INFO ServletRegistrationBean:190 - Mapping servlet: 'statViewServlet' to [/druid/*]
+2017-03-25 17:18:36,942  INFO ServletRegistrationBean:190 - Mapping servlet: 'dispatcherServlet' to [/]
+2017-03-25 17:18:36,950  INFO FilterRegistrationBean:258 - Mapping filter: 'characterEncodingFilter' to: [/*]
+2017-03-25 17:18:36,951  INFO FilterRegistrationBean:258 - Mapping filter: 'hiddenHttpMethodFilter' to: [/*]
+2017-03-25 17:18:36,953  INFO FilterRegistrationBean:258 - Mapping filter: 'httpPutFormContentFilter' to: [/*]
+2017-03-25 17:18:36,962  INFO FilterRegistrationBean:258 - Mapping filter: 'requestContextFilter' to: [/*]
+2017-03-25 17:18:36,962  INFO FilterRegistrationBean:271 - Mapping filter: 'webStatFilter' to urls: [/*]
+2017-03-25 17:18:36,964  INFO FilterRegistrationBean:258 - Mapping filter: 'melody' to: [/*]
+2017-03-25 17:18:39,184  INFO RequestMappingHandlerMapping:543 - Mapped "{[ || / || /index]}" onto public java.lang.String com.zhxp.web.controller.web.IndexController.index(org.springframework.ui.Model,javax.servlet.http.HttpServletRequest)
+2017-03-25 17:18:39,186  INFO RequestMappingHandlerMapping:543 - Mapped "{[/detail/{id}]}" onto public java.lang.String com.zhxp.web.controller.web.IndexController.detail(org.springframework.ui.Model,int)
+2017-03-25 17:18:39,187  INFO RequestMappingHandlerMapping:543 - Mapped "{[/v2/api-docs],methods=[GET],produces=[application/json || application/hal+json]}" onto public org.springframework.http.ResponseEntity<springfox.documentation.spring.web.json.Json> springfox.documentation.swagger2.web.Swagger2Controller.getDocumentation(java.lang.String,javax.servlet.http.HttpServletRequest)
+2017-03-25 17:18:39,192  INFO RequestMappingHandlerMapping:543 - Mapped "{[/swagger-resources/configuration/ui]}" onto org.springframework.http.ResponseEntity<springfox.documentation.swagger.web.UiConfiguration> springfox.documentation.swagger.web.ApiResourceController.uiConfiguration()
+2017-03-25 17:18:39,194  INFO RequestMappingHandlerMapping:543 - Mapped "{[/swagger-resources]}" onto org.springframework.http.ResponseEntity<java.util.List<springfox.documentation.swagger.web.SwaggerResource>> springfox.documentation.swagger.web.ApiResourceController.swaggerResources()
+2017-03-25 17:18:39,195  INFO RequestMappingHandlerMapping:543 - Mapped "{[/swagger-resources/configuration/security]}" onto org.springframework.http.ResponseEntity<springfox.documentation.swagger.web.SecurityConfiguration> springfox.documentation.swagger.web.ApiResourceController.securityConfiguration()
+2017-03-25 17:18:39,198  INFO RequestMappingHandlerMapping:543 - Mapped "{[/error]}" onto public org.springframework.http.ResponseEntity<java.util.Map<java.lang.String, java.lang.Object>> org.springframework.boot.autoconfigure.web.BasicErrorController.error(javax.servlet.http.HttpServletRequest)
+2017-03-25 17:18:39,199  INFO RequestMappingHandlerMapping:543 - Mapped "{[/error],produces=[text/html]}" onto public org.springframework.web.servlet.ModelAndView org.springframework.boot.autoconfigure.web.BasicErrorController.errorHtml(javax.servlet.http.HttpServletRequest,javax.servlet.http.HttpServletResponse)
+2017-03-25 17:18:39,540  INFO RequestMappingHandlerAdapter:534 - Looking for @ControllerAdvice: org.springframework.boot.context.embedded.AnnotationConfigEmbeddedWebApplicationContext@5c072e3f: startup date [Sat Mar 25 17:18:32 CST 2017]; root of context hierarchy
+2017-03-25 17:18:39,629  INFO SimpleUrlHandlerMapping:362 - Mapped URL path [/webjars/**] onto handler of type [class org.springframework.web.servlet.resource.ResourceHttpRequestHandler]
+2017-03-25 17:18:39,629  INFO SimpleUrlHandlerMapping:362 - Mapped URL path [/**] onto handler of type [class org.springframework.web.servlet.resource.ResourceHttpRequestHandler]
+2017-03-25 17:18:39,690  INFO SimpleUrlHandlerMapping:362 - Mapped URL path [/**/favicon.ico] onto handler of type [class org.springframework.web.servlet.resource.ResourceHttpRequestHandler]
+2017-03-25 17:18:40,010  INFO FreeMarkerConfigurer:127 - ClassTemplateLoader for Spring macros added to FreeMarker configuration
+2017-03-25 17:18:40,230  INFO AnnotationMBeanExporter:431 - Registering beans for JMX exposure on startup
+2017-03-25 17:18:40,231  INFO AnnotationMBeanExporter:916 - Bean with name 'dataSource' has been autodetected for JMX exposure
+2017-03-25 17:18:40,236  INFO AnnotationMBeanExporter:671 - Located MBean 'dataSource': registering with JMX server as MBean [com.alibaba.druid.pool:name=dataSource,type=DruidDataSource]
+2017-03-25 17:18:40,242  INFO DefaultLifecycleProcessor:343 - Starting beans in phase 2147483647
+2017-03-25 17:18:40,243  INFO DocumentationPluginsBootstrapper:120 - Context refreshed
+2017-03-25 17:18:40,266  INFO DocumentationPluginsBootstrapper:123 - Found 1 custom documentation plugin(s)
+2017-03-25 17:18:40,279  INFO ApiListingReferenceScanner:41 - Scanning for api listing references
+2017-03-25 17:18:40,371  INFO TomcatEmbeddedServletContainer:198 - Tomcat started on port(s): 8088 (http)
+2017-03-25 17:18:40,375  INFO Application:57 - Started Application in 8.724 seconds (JVM running for 9.247)
+2017-03-25 17:18:45,014  INFO DispatcherServlet:489 - FrameworkServlet 'dispatcherServlet': initialization started
+2017-03-25 17:18:45,051  INFO DispatcherServlet:508 - FrameworkServlet 'dispatcherServlet': initialization completed in 37 ms
+2017-03-25 17:18:45,207  INFO WebLogAspect:62 - {"Url":"http://localhost:8088/xj/detail/3","Param":[{},3],"Method":"GET","ip":"0:0:0:0:0:0:0:1","Class_Method":"com.zhxp.web.controller.web.IndexController.detail"}
+2017-03-25 17:18:45,226  INFO WebLogAspect:62 - {"Url":"http://localhost:8088/xj/detail/3","Param":[3],"Method":"GET","ip":"0:0:0:0:0:0:0:1","Class_Method":"com.zhxp.web.service.NewService.findOne"}
+2017-03-25 17:18:45,237  INFO WebLogAspect:62 - {"Url":"http://localhost:8088/xj/detail/3","Param":[3],"Method":"GET","ip":"0:0:0:0:0:0:0:1","Class_Method":"com.zhxp.web.mapper.NewsMapper.findOne"}
+2017-03-25 17:18:45,320  INFO DruidDataSource:715 - {dataSource-1} inited
+2017-03-25 17:19:04,071  INFO WebLogAspect:62 - {"Url":"http://localhost:8088/xj/detail/3","Param":[{},3],"Method":"GET","ip":"0:0:0:0:0:0:0:1","Class_Method":"com.zhxp.web.controller.web.IndexController.detail"}
+2017-03-25 17:19:04,072  INFO WebLogAspect:62 - {"Url":"http://localhost:8088/xj/detail/3","Param":[3],"Method":"GET","ip":"0:0:0:0:0:0:0:1","Class_Method":"com.zhxp.web.service.NewService.findOne"}
+2017-03-25 17:19:04,072  INFO WebLogAspect:62 - {"Url":"http://localhost:8088/xj/detail/3","Param":[3],"Method":"GET","ip":"0:0:0:0:0:0:0:1","Class_Method":"com.zhxp.web.mapper.NewsMapper.findOne"}
+2017-03-25 17:19:05,788  INFO WebLogAspect:62 - {"Url":"http://localhost:8088/xj/detail/3","Param":[{},3],"Method":"GET","ip":"0:0:0:0:0:0:0:1","Class_Method":"com.zhxp.web.controller.web.IndexController.detail"}
+2017-03-25 17:19:05,788  INFO WebLogAspect:62 - {"Url":"http://localhost:8088/xj/detail/3","Param":[3],"Method":"GET","ip":"0:0:0:0:0:0:0:1","Class_Method":"com.zhxp.web.service.NewService.findOne"}
+2017-03-25 17:19:05,789  INFO WebLogAspect:62 - {"Url":"http://localhost:8088/xj/detail/3","Param":[3],"Method":"GET","ip":"0:0:0:0:0:0:0:1","Class_Method":"com.zhxp.web.mapper.NewsMapper.findOne"}
+2017-03-25 17:19:06,644  INFO WebLogAspect:62 - {"Url":"http://localhost:8088/xj/detail/3","Param":[{},3],"Method":"GET","ip":"0:0:0:0:0:0:0:1","Class_Method":"com.zhxp.web.controller.web.IndexController.detail"}
+2017-03-25 17:19:06,645  INFO WebLogAspect:62 - {"Url":"http://localhost:8088/xj/detail/3","Param":[3],"Method":"GET","ip":"0:0:0:0:0:0:0:1","Class_Method":"com.zhxp.web.service.NewService.findOne"}
+2017-03-25 17:19:06,646  INFO WebLogAspect:62 - {"Url":"http://localhost:8088/xj/detail/3","Param":[3],"Method":"GET","ip":"0:0:0:0:0:0:0:1","Class_Method":"com.zhxp.web.mapper.NewsMapper.findOne"}
+2017-03-25 17:20:34,438  INFO WebLogAspect:62 - {"Url":"http://localhost:8088/xj/detail/3","Param":[{},3],"Method":"GET","ip":"0:0:0:0:0:0:0:1","Class_Method":"com.zhxp.web.controller.web.IndexController.detail"}
+2017-03-25 17:20:34,438  INFO WebLogAspect:62 - {"Url":"http://localhost:8088/xj/detail/3","Param":[3],"Method":"GET","ip":"0:0:0:0:0:0:0:1","Class_Method":"com.zhxp.web.service.NewService.findOne"}
+2017-03-25 17:20:34,439  INFO WebLogAspect:62 - {"Url":"http://localhost:8088/xj/detail/3","Param":[3],"Method":"GET","ip":"0:0:0:0:0:0:0:1","Class_Method":"com.zhxp.web.mapper.NewsMapper.findOne"}
+2017-03-25 17:20:36,351  INFO WebLogAspect:62 - {"Url":"http://localhost:8088/xj/detail/3","Param":[{},3],"Method":"GET","ip":"0:0:0:0:0:0:0:1","Class_Method":"com.zhxp.web.controller.web.IndexController.detail"}
+2017-03-25 17:20:36,352  INFO WebLogAspect:62 - {"Url":"http://localhost:8088/xj/detail/3","Param":[3],"Method":"GET","ip":"0:0:0:0:0:0:0:1","Class_Method":"com.zhxp.web.service.NewService.findOne"}
+2017-03-25 17:20:36,352  INFO WebLogAspect:62 - {"Url":"http://localhost:8088/xj/detail/3","Param":[3],"Method":"GET","ip":"0:0:0:0:0:0:0:1","Class_Method":"com.zhxp.web.mapper.NewsMapper.findOne"}
+2017-03-25 17:20:37,439  INFO WebLogAspect:62 - {"Url":"http://localhost:8088/xj/detail/3","Param":[{},3],"Method":"GET","ip":"0:0:0:0:0:0:0:1","Class_Method":"com.zhxp.web.controller.web.IndexController.detail"}
+2017-03-25 17:20:37,440  INFO WebLogAspect:62 - {"Url":"http://localhost:8088/xj/detail/3","Param":[3],"Method":"GET","ip":"0:0:0:0:0:0:0:1","Class_Method":"com.zhxp.web.service.NewService.findOne"}
+2017-03-25 17:20:37,441  INFO WebLogAspect:62 - {"Url":"http://localhost:8088/xj/detail/3","Param":[3],"Method":"GET","ip":"0:0:0:0:0:0:0:1","Class_Method":"com.zhxp.web.mapper.NewsMapper.findOne"}
+2017-03-25 17:23:22,282  INFO Application:48 - Starting Application on zhuhao with PID 10620 (E:\project\XveJie\target\classes started by zhu in E:\project\XveJie)
+2017-03-25 17:23:22,285  INFO Application:641 - The following profiles are active: dev
+2017-03-25 17:23:22,380  INFO AnnotationConfigEmbeddedWebApplicationContext:582 - Refreshing org.springframework.boot.context.embedded.AnnotationConfigEmbeddedWebApplicationContext@5c072e3f: startup date [Sat Mar 25 17:23:22 CST 2017]; root of context hierarchy
+2017-03-25 17:23:23,132  INFO Version:30 - HV000001: Hibernate Validator 5.3.4.Final
+2017-03-25 17:23:25,316  INFO PostProcessorRegistrationDelegate$BeanPostProcessorChecker:325 - Bean 'org.springframework.transaction.annotation.ProxyTransactionManagementConfiguration' of type [org.springframework.transaction.annotation.ProxyTransactionManagementConfiguration$$EnhancerBySpringCGLIB$$5ec1ecb1] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+2017-03-25 17:23:26,286  INFO TomcatEmbeddedServletContainer:89 - Tomcat initialized with port(s): 8088 (http)
+2017-03-25 17:23:26,724  INFO ContextLoader:276 - Root WebApplicationContext: initialization completed in 4347 ms
+2017-03-25 17:23:26,755  INFO DruidConfiguration:30 - init Druid Servlet Configuration 
+2017-03-25 17:23:27,158  INFO ServletRegistrationBean:190 - Mapping servlet: 'statViewServlet' to [/druid/*]
+2017-03-25 17:23:27,160  INFO ServletRegistrationBean:190 - Mapping servlet: 'dispatcherServlet' to [/]
+2017-03-25 17:23:27,163  INFO FilterRegistrationBean:258 - Mapping filter: 'characterEncodingFilter' to: [/*]
+2017-03-25 17:23:27,163  INFO FilterRegistrationBean:258 - Mapping filter: 'hiddenHttpMethodFilter' to: [/*]
+2017-03-25 17:23:27,164  INFO FilterRegistrationBean:258 - Mapping filter: 'httpPutFormContentFilter' to: [/*]
+2017-03-25 17:23:27,164  INFO FilterRegistrationBean:258 - Mapping filter: 'requestContextFilter' to: [/*]
+2017-03-25 17:23:27,164  INFO FilterRegistrationBean:271 - Mapping filter: 'webStatFilter' to urls: [/*]
+2017-03-25 17:23:27,166  INFO FilterRegistrationBean:258 - Mapping filter: 'melody' to: [/*]
+2017-03-25 17:23:29,020  INFO RequestMappingHandlerMapping:543 - Mapped "{[ || / || /index]}" onto public java.lang.String com.zhxp.web.controller.web.IndexController.index(org.springframework.ui.Model,javax.servlet.http.HttpServletRequest)
+2017-03-25 17:23:29,021  INFO RequestMappingHandlerMapping:543 - Mapped "{[/detail/{id}]}" onto public java.lang.String com.zhxp.web.controller.web.IndexController.detail(org.springframework.ui.Model,int)
+2017-03-25 17:23:29,023  INFO RequestMappingHandlerMapping:543 - Mapped "{[/v2/api-docs],methods=[GET],produces=[application/json || application/hal+json]}" onto public org.springframework.http.ResponseEntity<springfox.documentation.spring.web.json.Json> springfox.documentation.swagger2.web.Swagger2Controller.getDocumentation(java.lang.String,javax.servlet.http.HttpServletRequest)
+2017-03-25 17:23:29,029  INFO RequestMappingHandlerMapping:543 - Mapped "{[/swagger-resources/configuration/ui]}" onto org.springframework.http.ResponseEntity<springfox.documentation.swagger.web.UiConfiguration> springfox.documentation.swagger.web.ApiResourceController.uiConfiguration()
+2017-03-25 17:23:29,030  INFO RequestMappingHandlerMapping:543 - Mapped "{[/swagger-resources]}" onto org.springframework.http.ResponseEntity<java.util.List<springfox.documentation.swagger.web.SwaggerResource>> springfox.documentation.swagger.web.ApiResourceController.swaggerResources()
+2017-03-25 17:23:29,031  INFO RequestMappingHandlerMapping:543 - Mapped "{[/swagger-resources/configuration/security]}" onto org.springframework.http.ResponseEntity<springfox.documentation.swagger.web.SecurityConfiguration> springfox.documentation.swagger.web.ApiResourceController.securityConfiguration()
+2017-03-25 17:23:29,035  INFO RequestMappingHandlerMapping:543 - Mapped "{[/error]}" onto public org.springframework.http.ResponseEntity<java.util.Map<java.lang.String, java.lang.Object>> org.springframework.boot.autoconfigure.web.BasicErrorController.error(javax.servlet.http.HttpServletRequest)
+2017-03-25 17:23:29,036  INFO RequestMappingHandlerMapping:543 - Mapped "{[/error],produces=[text/html]}" onto public org.springframework.web.servlet.ModelAndView org.springframework.boot.autoconfigure.web.BasicErrorController.errorHtml(javax.servlet.http.HttpServletRequest,javax.servlet.http.HttpServletResponse)
+2017-03-25 17:23:29,349  INFO RequestMappingHandlerAdapter:534 - Looking for @ControllerAdvice: org.springframework.boot.context.embedded.AnnotationConfigEmbeddedWebApplicationContext@5c072e3f: startup date [Sat Mar 25 17:23:22 CST 2017]; root of context hierarchy
+2017-03-25 17:23:29,425  INFO SimpleUrlHandlerMapping:362 - Mapped URL path [/webjars/**] onto handler of type [class org.springframework.web.servlet.resource.ResourceHttpRequestHandler]
+2017-03-25 17:23:29,426  INFO SimpleUrlHandlerMapping:362 - Mapped URL path [/**] onto handler of type [class org.springframework.web.servlet.resource.ResourceHttpRequestHandler]
+2017-03-25 17:23:29,479  INFO SimpleUrlHandlerMapping:362 - Mapped URL path [/**/favicon.ico] onto handler of type [class org.springframework.web.servlet.resource.ResourceHttpRequestHandler]
+2017-03-25 17:23:29,786  INFO FreeMarkerConfigurer:127 - ClassTemplateLoader for Spring macros added to FreeMarker configuration
+2017-03-25 17:23:29,999  INFO AnnotationMBeanExporter:431 - Registering beans for JMX exposure on startup
+2017-03-25 17:23:30,003  INFO AnnotationMBeanExporter:916 - Bean with name 'dataSource' has been autodetected for JMX exposure
+2017-03-25 17:23:30,009  INFO AnnotationMBeanExporter:671 - Located MBean 'dataSource': registering with JMX server as MBean [com.alibaba.druid.pool:name=dataSource,type=DruidDataSource]
+2017-03-25 17:23:30,014  INFO DefaultLifecycleProcessor:343 - Starting beans in phase 2147483647
+2017-03-25 17:23:30,014  INFO DocumentationPluginsBootstrapper:120 - Context refreshed
+2017-03-25 17:23:30,035  INFO DocumentationPluginsBootstrapper:123 - Found 1 custom documentation plugin(s)
+2017-03-25 17:23:30,046  INFO ApiListingReferenceScanner:41 - Scanning for api listing references
+2017-03-25 17:23:30,155  INFO TomcatEmbeddedServletContainer:198 - Tomcat started on port(s): 8088 (http)
+2017-03-25 17:23:30,161  INFO Application:57 - Started Application in 8.313 seconds (JVM running for 8.758)
+2017-03-25 17:23:38,367  INFO DispatcherServlet:489 - FrameworkServlet 'dispatcherServlet': initialization started
+2017-03-25 17:23:38,405  INFO DispatcherServlet:508 - FrameworkServlet 'dispatcherServlet': initialization completed in 37 ms
+2017-03-25 17:23:38,531  INFO WebLogAspect:62 - {"Url":"http://localhost:8088/xj/detail/3","Param":[{},3],"Method":"GET","ip":"0:0:0:0:0:0:0:1","Class_Method":"com.zhxp.web.controller.web.IndexController.detail"}
+2017-03-25 17:23:38,621  INFO DruidDataSource:715 - {dataSource-1} inited
+2017-03-25 17:26:06,512  INFO Application:48 - Starting Application on zhuhao with PID 10524 (E:\project\XveJie\target\classes started by zhu in E:\project\XveJie)
+2017-03-25 17:26:06,516  INFO Application:641 - The following profiles are active: dev
+2017-03-25 17:26:06,620  INFO AnnotationConfigEmbeddedWebApplicationContext:582 - Refreshing org.springframework.boot.context.embedded.AnnotationConfigEmbeddedWebApplicationContext@5c072e3f: startup date [Sat Mar 25 17:26:06 CST 2017]; root of context hierarchy
+2017-03-25 17:26:08,061  INFO Version:30 - HV000001: Hibernate Validator 5.3.4.Final
+2017-03-25 17:26:09,465  INFO PostProcessorRegistrationDelegate$BeanPostProcessorChecker:325 - Bean 'org.springframework.transaction.annotation.ProxyTransactionManagementConfiguration' of type [org.springframework.transaction.annotation.ProxyTransactionManagementConfiguration$$EnhancerBySpringCGLIB$$5ec1ecb1] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+2017-03-25 17:26:10,327  INFO TomcatEmbeddedServletContainer:89 - Tomcat initialized with port(s): 8088 (http)
+2017-03-25 17:26:10,724  INFO ContextLoader:276 - Root WebApplicationContext: initialization completed in 4108 ms
+2017-03-25 17:26:10,757  INFO DruidConfiguration:30 - init Druid Servlet Configuration 
+2017-03-25 17:26:11,175  INFO ServletRegistrationBean:190 - Mapping servlet: 'statViewServlet' to [/druid/*]
+2017-03-25 17:26:11,177  INFO ServletRegistrationBean:190 - Mapping servlet: 'dispatcherServlet' to [/]
+2017-03-25 17:26:11,183  INFO FilterRegistrationBean:258 - Mapping filter: 'characterEncodingFilter' to: [/*]
+2017-03-25 17:26:11,184  INFO FilterRegistrationBean:258 - Mapping filter: 'hiddenHttpMethodFilter' to: [/*]
+2017-03-25 17:26:11,185  INFO FilterRegistrationBean:258 - Mapping filter: 'httpPutFormContentFilter' to: [/*]
+2017-03-25 17:26:11,186  INFO FilterRegistrationBean:258 - Mapping filter: 'requestContextFilter' to: [/*]
+2017-03-25 17:26:11,186  INFO FilterRegistrationBean:271 - Mapping filter: 'webStatFilter' to urls: [/*]
+2017-03-25 17:26:11,187  INFO FilterRegistrationBean:258 - Mapping filter: 'melody' to: [/*]
+2017-03-25 17:26:13,116  INFO RequestMappingHandlerMapping:543 - Mapped "{[ || / || /index]}" onto public java.lang.String com.zhxp.web.controller.web.IndexController.index(org.springframework.ui.Model,javax.servlet.http.HttpServletRequest)
+2017-03-25 17:26:13,118  INFO RequestMappingHandlerMapping:543 - Mapped "{[/detail/{id}]}" onto public java.lang.String com.zhxp.web.controller.web.IndexController.detail(org.springframework.ui.Model,int)
+2017-03-25 17:26:13,119  INFO RequestMappingHandlerMapping:543 - Mapped "{[/v2/api-docs],methods=[GET],produces=[application/json || application/hal+json]}" onto public org.springframework.http.ResponseEntity<springfox.documentation.spring.web.json.Json> springfox.documentation.swagger2.web.Swagger2Controller.getDocumentation(java.lang.String,javax.servlet.http.HttpServletRequest)
+2017-03-25 17:26:13,124  INFO RequestMappingHandlerMapping:543 - Mapped "{[/swagger-resources/configuration/ui]}" onto org.springframework.http.ResponseEntity<springfox.documentation.swagger.web.UiConfiguration> springfox.documentation.swagger.web.ApiResourceController.uiConfiguration()
+2017-03-25 17:26:13,125  INFO RequestMappingHandlerMapping:543 - Mapped "{[/swagger-resources]}" onto org.springframework.http.ResponseEntity<java.util.List<springfox.documentation.swagger.web.SwaggerResource>> springfox.documentation.swagger.web.ApiResourceController.swaggerResources()
+2017-03-25 17:26:13,127  INFO RequestMappingHandlerMapping:543 - Mapped "{[/swagger-resources/configuration/security]}" onto org.springframework.http.ResponseEntity<springfox.documentation.swagger.web.SecurityConfiguration> springfox.documentation.swagger.web.ApiResourceController.securityConfiguration()
+2017-03-25 17:26:13,131  INFO RequestMappingHandlerMapping:543 - Mapped "{[/error]}" onto public org.springframework.http.ResponseEntity<java.util.Map<java.lang.String, java.lang.Object>> org.springframework.boot.autoconfigure.web.BasicErrorController.error(javax.servlet.http.HttpServletRequest)
+2017-03-25 17:26:13,132  INFO RequestMappingHandlerMapping:543 - Mapped "{[/error],produces=[text/html]}" onto public org.springframework.web.servlet.ModelAndView org.springframework.boot.autoconfigure.web.BasicErrorController.errorHtml(javax.servlet.http.HttpServletRequest,javax.servlet.http.HttpServletResponse)
+2017-03-25 17:26:13,474  INFO RequestMappingHandlerAdapter:534 - Looking for @ControllerAdvice: org.springframework.boot.context.embedded.AnnotationConfigEmbeddedWebApplicationContext@5c072e3f: startup date [Sat Mar 25 17:26:06 CST 2017]; root of context hierarchy
+2017-03-25 17:26:13,546  INFO SimpleUrlHandlerMapping:362 - Mapped URL path [/webjars/**] onto handler of type [class org.springframework.web.servlet.resource.ResourceHttpRequestHandler]
+2017-03-25 17:26:13,547  INFO SimpleUrlHandlerMapping:362 - Mapped URL path [/**] onto handler of type [class org.springframework.web.servlet.resource.ResourceHttpRequestHandler]
+2017-03-25 17:26:13,606  INFO SimpleUrlHandlerMapping:362 - Mapped URL path [/**/favicon.ico] onto handler of type [class org.springframework.web.servlet.resource.ResourceHttpRequestHandler]
+2017-03-25 17:26:13,937  INFO FreeMarkerConfigurer:127 - ClassTemplateLoader for Spring macros added to FreeMarker configuration
+2017-03-25 17:26:14,186  INFO AnnotationMBeanExporter:431 - Registering beans for JMX exposure on startup
+2017-03-25 17:26:14,188  INFO AnnotationMBeanExporter:916 - Bean with name 'dataSource' has been autodetected for JMX exposure
+2017-03-25 17:26:14,194  INFO AnnotationMBeanExporter:671 - Located MBean 'dataSource': registering with JMX server as MBean [com.alibaba.druid.pool:name=dataSource,type=DruidDataSource]
+2017-03-25 17:26:14,199  INFO DefaultLifecycleProcessor:343 - Starting beans in phase 2147483647
+2017-03-25 17:26:14,200  INFO DocumentationPluginsBootstrapper:120 - Context refreshed
+2017-03-25 17:26:14,224  INFO DocumentationPluginsBootstrapper:123 - Found 1 custom documentation plugin(s)
+2017-03-25 17:26:14,241  INFO ApiListingReferenceScanner:41 - Scanning for api listing references
+2017-03-25 17:26:14,343  INFO TomcatEmbeddedServletContainer:198 - Tomcat started on port(s): 8088 (http)
+2017-03-25 17:26:14,350  INFO Application:57 - Started Application in 8.385 seconds (JVM running for 8.822)
+2017-03-25 17:26:19,158  INFO DispatcherServlet:489 - FrameworkServlet 'dispatcherServlet': initialization started
+2017-03-25 17:26:19,199  INFO DispatcherServlet:508 - FrameworkServlet 'dispatcherServlet': initialization completed in 41 ms
+2017-03-25 17:26:19,336  INFO WebLogAspect:62 - {"Url":"http://localhost:8088/xj/detail/3","Param":[{},3],"Method":"GET","ip":"0:0:0:0:0:0:0:1","Class_Method":"com.zhxp.web.controller.web.IndexController.detail"}
+2017-03-25 17:26:19,441  INFO DruidDataSource:715 - {dataSource-1} inited
+2017-03-25 17:26:20,047  INFO WebLogAspect:71 - {"Response":"detail","Spend Time":786}
+2017-03-25 17:26:24,706  INFO WebLogAspect:62 - {"Url":"http://localhost:8088/xj/detail/3","Param":[{},3],"Method":"GET","ip":"0:0:0:0:0:0:0:1","Class_Method":"com.zhxp.web.controller.web.IndexController.detail"}
+2017-03-25 17:26:24,741  INFO WebLogAspect:71 - {"Response":"detail","Spend Time":35}
+2017-03-25 17:28:07,853  INFO WebLogAspect:62 - {"Url":"http://localhost:8088/xj/detail/3","Param":[{},3],"Method":"GET","ip":"0:0:0:0:0:0:0:1","Class_Method":"com.zhxp.web.controller.web.IndexController.detail"}
+2017-03-25 17:28:07,891  INFO WebLogAspect:71 - {"Response":"detail","Spend Time":38}

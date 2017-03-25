@@ -5,6 +5,7 @@ import io.swagger.annotations.ApiOperation;
 import org.springframework.context.annotation.Bean;
 import org.springframework.context.annotation.Configuration;
 import org.springframework.web.bind.annotation.RequestMethod;
+import springfox.documentation.builders.ApiInfoBuilder;
 import springfox.documentation.builders.PathSelectors;
 import springfox.documentation.builders.RequestHandlerSelectors;
 import springfox.documentation.builders.ResponseMessageBuilder;
@@ -23,6 +24,7 @@ import static com.google.common.collect.Lists.newArrayList;
 @Configuration
 @EnableSwagger2
 public class Swagger2 {
+
     @Bean
     public Docket api() {
         return new Docket(DocumentationType.SWAGGER_2)
@@ -45,15 +47,15 @@ public class Swagger2 {
                                         .build()
                         ));
     }
+
     private ApiInfo apiInfo() {
-        return new ApiInfo(
-                "标题",
-                "描述",
-                "1.0",
-                "",
-                new Contact("朱昊", "", ""),
-                "zhuhao.info",
-                "zhuhao.info");
+        return new ApiInfoBuilder()
+                .title("Spring Boot中使用Swagger2构建RESTful APIs")
+                .description("更多Spring Boot相关文章请关注：http://blog.didispace.com/")
+                .termsOfServiceUrl("http://blog.didispace.com/")
+                .contact("朱昊")
+                .version("1.0")
+                .build();
     }
 
 }

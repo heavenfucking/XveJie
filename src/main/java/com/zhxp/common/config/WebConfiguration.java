@@ -43,7 +43,7 @@ public class WebConfiguration extends WebMvcConfigurerAdapter {
 
         @Override
         public boolean preHandle(HttpServletRequest request, HttpServletResponse response, Object handler) throws Exception {
-            logger.info("remoteAddr="+request.getRemoteAddr()+" request="+request.getRequestURI());
+            //logger.info("remoteAddr="+request.getRemoteAddr()+" request="+request.getRequestURI());
             return true;
         }
 

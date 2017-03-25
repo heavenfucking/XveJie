@@ -40,7 +40,7 @@ public class WebLogAspect {
 
     ThreadLocal<Long> startTime = new ThreadLocal<>();
 
-    @Pointcut("execution(public * com.zhxp.web..*.*(..))")
+    @Pointcut("execution(public * com.zhxp.web.controller..*.*(..))")
     public void webLog(){}
 
     @Before("webLog()")
@@ -58,15 +58,16 @@ public class WebLogAspect {
         json.put("Method", request.getMethod());
         json.put("ip" , request.getRemoteAddr());
         json.put("Class_Method", joinPoint.getSignature().getDeclaringTypeName() + "." + joinPoint.getSignature().getName());
-
         logger.info(json.toString());
     }
 
     @AfterReturning(returning = "ret", pointcut = "webLog()")
     public void doAfterReturning(Object ret) throws Throwable {
         // 处理完请求，返回内容
-//        logger.info("RESPONSE : " + ret);
-//        logger.info("SPEND TIME : " + (System.currentTimeMillis() - startTime.get()));
+        JSONObject json = new JSONObject();
+        json.put("Response", ret);
+        json.put("Spend Time", (System.currentTimeMillis() - startTime.get()));
+        logger.info(json.toString());
     }
 
 

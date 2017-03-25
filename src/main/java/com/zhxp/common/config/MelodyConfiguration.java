@@ -27,7 +27,7 @@ public class MelodyConfiguration implements ServletContextInitializer {
         javaMelody.setAsyncSupported(true);
         javaMelody.setName("melody");
         javaMelody.setDispatcherTypes(DispatcherType.REQUEST, DispatcherType.ASYNC);
-        javaMelody.addInitParameter(Parameter.LOG.getCode(), "true");
+        javaMelody.addInitParameter(Parameter.LOG.getCode(), "false");
         return javaMelody;
     }
 }
