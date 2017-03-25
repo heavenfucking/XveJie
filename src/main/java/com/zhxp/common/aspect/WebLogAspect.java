@@ -1,5 +1,12 @@
 package com.zhxp.common.aspect;
 
+
+
+
+
+
+import net.sf.json.JSON;
+import net.sf.json.JSONObject;
 import org.apache.log4j.Logger;
 import org.aspectj.lang.JoinPoint;
 import org.aspectj.lang.annotation.AfterReturning;
@@ -13,6 +20,8 @@ import org.springframework.web.context.request.ServletRequestAttributes;
 
 import javax.servlet.http.HttpServletRequest;
 import java.util.Arrays;
+
+
 
 /**
  * Web层日志切面
@@ -31,7 +40,7 @@ public class WebLogAspect {
 
     ThreadLocal<Long> startTime = new ThreadLocal<>();
 
-    @Pointcut("execution(public * com.didispace.web..*.*(..))")
+    @Pointcut("execution(public * com.zhxp.web..*.*(..))")
     public void webLog(){}
 
     @Before("webLog()")
@@ -42,20 +51,22 @@ public class WebLogAspect {
         ServletRequestAttributes attributes = (ServletRequestAttributes) RequestContextHolder.getRequestAttributes();
         HttpServletRequest request = attributes.getRequest();
 
+        JSONObject json = new JSONObject();
         // 记录下请求内容
-        logger.info("URL : " + request.getRequestURL().toString());
-        logger.info("HTTP_METHOD : " + request.getMethod());
-        logger.info("IP : " + request.getRemoteAddr());
-        logger.info("CLASS_METHOD : " + joinPoint.getSignature().getDeclaringTypeName() + "." + joinPoint.getSignature().getName());
-        logger.info("ARGS : " + Arrays.toString(joinPoint.getArgs()));
+        json.put("Url", request.getRequestURL().toString());
+        json.put("Param",  Arrays.toString(joinPoint.getArgs()));
+        json.put("Method", request.getMethod());
+        json.put("ip" , request.getRemoteAddr());
+        json.put("Class_Method", joinPoint.getSignature().getDeclaringTypeName() + "." + joinPoint.getSignature().getName());
 
+        logger.info(json.toString());
     }
 
     @AfterReturning(returning = "ret", pointcut = "webLog()")
     public void doAfterReturning(Object ret) throws Throwable {
         // 处理完请求，返回内容
-        logger.info("RESPONSE : " + ret);
-        logger.info("SPEND TIME : " + (System.currentTimeMillis() - startTime.get()));
+//        logger.info("RESPONSE : " + ret);
+//        logger.info("SPEND TIME : " + (System.currentTimeMillis() - startTime.get()));
     }
 
 
