@@ -14,8 +14,9 @@ import org.springframework.stereotype.Controller;
 import org.springframework.ui.Model;
 import org.springframework.web.bind.annotation.*;
 
+import javax.servlet.http.HttpServlet;
 import javax.servlet.http.HttpServletRequest;
-@Api(value = "article", description = "文章API", produces = MediaType.APPLICATION_JSON_VALUE)
+@Api(value = "article", description = "文章API", produces = MediaType.APPLICATION_JSON_VALUE, hidden = true)
 @RestController
 @RequestMapping(value="/article")
 public class ArticleController {

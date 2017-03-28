@@ -18,7 +18,7 @@ import java.util.*;
  * @blog http://blog.didispace.com
  *
  */
-@Api(value = "user", description = "测试API", produces = MediaType.APPLICATION_JSON_VALUE)
+@Api(value = "user", description = "测试API", produces = MediaType.APPLICATION_JSON_VALUE,hidden = false)
 @RestController
 @RequestMapping(value="/users")     // 通过这里配置使下面的映射都在/users下，可去除
 public class UserController {
