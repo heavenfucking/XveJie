@@ -51,7 +51,7 @@ public class StudentController {
     }
 
     @ApiOperation(value="获取学生列表", notes="根据页号获取学生列表")
-    @RequestMapping(value= Url.StudentAPI.LIST_STUDENT_URL, method= RequestMethod.GET)
+    @RequestMapping(value= Url.StudentAPI.LIST_STUDENT_URL, method= RequestMethod.POST)
     public ResultDto getStudentList(@ApiParam("页码") @RequestParam(defaultValue = "1") Integer pageNo) {
         Page<Student> page = new Page<>();
         page.setPageNo(pageNo);

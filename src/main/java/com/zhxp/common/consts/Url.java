@@ -21,4 +21,22 @@ public interface Url {
         /** 查询*/
         public static final String LIST_STUDENT_URL = "student/list";
     }
+
+    /**
+     * Teacher增删改接口
+     */
+    class TeacherAPI{
+
+        /** 添加 */
+        public static final String ADD_TEACHER_URL = "teacher/add";
+
+        /** 删除 */
+        public static final String DEL_TEACHER_URL = "teacher/delete";
+
+        /** 修改 */
+        public static final String UPDATE_TEACHER_URL = "teacher/update";
+
+        /** 查询*/
+        public static final String LIST_TEACHER_URL = "teacher/list";
+    }
 }

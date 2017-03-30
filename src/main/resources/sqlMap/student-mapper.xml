@@ -19,6 +19,9 @@
 		     <include refid="Base_Colmmn_List"/>
 		from
 		    student_info
+		order by
+		   id
+		desc
 	</select>
 
 	<insert id="insert" parameterType="com.zhxp.web.entity.Student">

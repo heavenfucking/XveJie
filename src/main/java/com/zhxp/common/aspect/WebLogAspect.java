@@ -31,9 +31,9 @@ import java.util.Arrays;
  * @date 16/5/17 上午10:42.
  * @blog http://blog.didispace.com
  */
-@Aspect
-@Order(5)
-@Component
+//@Aspect
+//@Order(5)
+//@Component
 public class WebLogAspect {
 
     private Logger logger = Logger.getLogger(getClass());

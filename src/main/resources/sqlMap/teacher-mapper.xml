@@ -1,0 +1,94 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd" >
+<mapper namespace="com.zhxp.web.mapper.TeacherMapper">
+	<resultMap id="BaseResultMap" type="com.zhxp.web.entity.Teacher">
+		<id column="id" property="id" jdbcType="INTEGER"/>
+		<result column="no" property="no" jdbcType="VARCHAR"/>
+		<result column="name" property="name" jdbcType="VARCHAR"/>
+		<result column="sex" property="sex" jdbcType="INTEGER"/>
+		<result column="department" property="department" jdbcType="INTEGER"/>
+		<result column="pwd" property="password" jdbcType="VARCHAR"/>
+	</resultMap>
+	<sql id="Base_Colmmn_List">
+		id, no, name, sex, department, pwd
+
+	</sql>
+	<!-- findAll -->
+	<select id="selectByPage" resultMap="BaseResultMap">
+		select
+		     <include refid="Base_Colmmn_List"/>
+		from
+		    teacher_info
+		order by
+		   id
+		desc
+	</select>
+
+	<insert id="insert" useGeneratedKeys="true" parameterType="com.zhxp.web.entity.Teacher">
+		insert into teacher_info
+		<trim prefix="(" suffix=")" suffixOverrides=",">
+			<if test="no!=null">
+				no,
+			</if>
+			<if test="name!=null">
+				name,
+			</if>
+			<if test="sex!=null">
+				sex,
+			</if>
+			<if test="department!=null">
+				department,
+			</if>
+			<if test="password!=null">
+				pwd,
+			</if>
+		</trim>
+		<trim prefix="values (" suffix=")" suffixOverrides=",">
+			<if test="no!=null">
+				#{no, jdbcType=VARCHAR},
+			</if>
+			<if test="name!=null">
+				#{name, jdbcType=VARCHAR},
+			</if>
+			<if test="sex!=null">
+				#{sex, jdbcType=INTEGER},
+			</if>
+			<if test="department!=null">
+				#{department, jdbcType=INTEGER},
+			</if>
+			<if test="password!=null">
+				#{password, jdbcType=VARCHAR},
+			</if>
+		</trim>
+	</insert>
+
+	<update id="update" parameterType="com.zhxp.web.entity.Teacher">
+		update teacher_info
+		<set>
+			<if test="no!=null">
+				no = #{no, jdbcType=VARCHAR},
+			</if>
+			<if test="name!=null">
+				name = #{name, jdbcType=VARCHAR},
+			</if>
+			<if test="sex!=null">
+				sex = #{sex, jdbcType=INTEGER},
+			</if>
+			<if test="department!=null">
+				department = #{department, jdbcType=INTEGER},
+			</if>
+			<if test="password!=null">
+				pwd = #{password, jdbcType=VARCHAR},
+			</if>
+		</set>
+		where
+		   id = #{id, jdbcType=INTEGER}
+	</update>
+
+
+	<delete id="delete" parameterType="java.lang.Integer">
+		delete from teacher_info where id = #{id, jdbcType=INTEGER}
+	</delete>
+
+
+</mapper>

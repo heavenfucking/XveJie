@@ -21,7 +21,7 @@ public class Page<T> {
     /**
      * 每页显示的记录数，默认是10
      */
-    private int pageSize = 25;
+    private int pageSize = 10;
     /**
      * 总记录数
      */

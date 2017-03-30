@@ -19,7 +19,7 @@ public class MelodyConfiguration implements ServletContextInitializer {
     @Override
     public void onStartup(ServletContext servletContext) throws ServletException {
 
-        
+
     }
     @Bean
     public FilterRegistrationBean registrationBean() {
@@ -28,7 +28,7 @@ public class MelodyConfiguration implements ServletContextInitializer {
         javaMelody.setAsyncSupported(true);
         javaMelody.setName("melody");
         javaMelody.setDispatcherTypes(DispatcherType.REQUEST, DispatcherType.ASYNC);
-        javaMelody.addInitParameter(Parameter.LOG.getCode(), "false");
+        javaMelody.addInitParameter(Parameter.LOG.getCode(), "true");
         return javaMelody;
     }
 }
