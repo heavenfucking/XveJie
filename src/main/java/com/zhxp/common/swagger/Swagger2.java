@@ -44,6 +44,11 @@ public class Swagger2 {
                                         .code(-1)
                                         .message("系统错误，请提交Bug")
                                         .responseModel(new ModelRef("Error"))
+                                        .build(),
+                                new ResponseMessageBuilder()
+                                        .code(100)
+                                        .message("未登录系统")
+                                        .responseModel(new ModelRef("Error"))
                                         .build()
                         ));
     }

@@ -21,4 +21,17 @@ public interface App {
         public static final String API_RESULT_MSG_FOR_FAIL = "系统繁忙，请稍后再试";
 
     }
+
+    class SessionExceptionCode{
+
+        /** 未登录异常代码 */
+        public static final int IS_NOT_LOGON_CODE = 100;
+        /** 为登录异常信息 */
+        public static final String IS_NOT_LOGON_MSG = "未登录";
+
+    }
+
+    class Session{
+        public static final String SESSION_USER_LOGIN_KEY = "session_user_login_key";
+    }
 }

@@ -39,4 +39,14 @@ public interface Url {
         /** 查询*/
         public static final String LIST_TEACHER_URL = "teacher/list";
     }
+
+    /**
+     * 用户登陆接口
+     */
+    class UserLoginAPI{
+
+        /** 登录 */
+        public static final String USER_LOGIN_URL = "user/login";
+    }
+
 }
