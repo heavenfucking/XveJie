@@ -6,8 +6,8 @@
 		<result column="stu_no" property="no" jdbcType="VARCHAR"/>
 		<result column="stu_name" property="name" jdbcType="VARCHAR"/>
 		<result column="stu_sex" property="sex" jdbcType="INTEGER"/>
-		<result column="stu_department" property="department" jdbcType="INTEGER"/>
-		<result column="stu_class" property="_class" jdbcType="INTEGER"/>
+		<result column="stu_department" property="department" jdbcType="VARCHAR"/>
+		<result column="stu_class" property="_class" jdbcType="VARCHAR"/>
 		<result column="stu_pwd" property="password" jdbcType="VARCHAR"/>
 	</resultMap>
 	<sql id="Base_Colmmn_List">
@@ -57,10 +57,10 @@
 				#{sex, jdbcType=INTEGER},
 			</if>
 			<if test="department!=null">
-				#{department, jdbcType=INTEGER},
+				#{department, jdbcType=VARCHAR},
 			</if>
 			<if test="_class!=null">
-				#{_class, jdbcType=INTEGER},
+				#{_class, jdbcType=VARCHAR},
 			</if>
 			<if test="password!=null">
 				#{password, jdbcType=VARCHAR},
@@ -99,6 +99,15 @@
 		delete from student_info where id = #{id, jdbcType=INTEGER}
 	</delete>
 
+	<select id="selectByNo" resultMap="BaseResultMap">
+		select
+		  <include refid="Base_Colmmn_List"/>
+		from
+		  student_info
+		WHERE
+		  stu_no = #{no, jdbcType = VARCHAR}
+		limit 1
+	</select>
 
 	
 

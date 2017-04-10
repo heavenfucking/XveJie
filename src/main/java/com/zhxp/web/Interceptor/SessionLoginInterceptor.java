@@ -15,9 +15,9 @@ import javax.servlet.http.HttpServletResponse;
 public class SessionLoginInterceptor extends HandlerInterceptorAdapter {
     @Override
     public boolean preHandle(HttpServletRequest request, HttpServletResponse response, Object o) throws Exception {
-        Object obj = request.getSession().getAttribute(App.Session.SESSION_USER_LOGIN_KEY);
-        if(obj==null)
-           throw new SessionException("未登录");
+        Object obj = request.getSession().getAttribute(App.Session.SESSION_USER_LOGIN_OBJ_KEY);
+//        if(obj==null)
+//           throw new SessionException("未登录");
         return true;
     }
 }

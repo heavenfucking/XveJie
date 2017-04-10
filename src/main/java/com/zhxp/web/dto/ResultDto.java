@@ -1,4 +1,4 @@
-package com.zhxp.web.controller.dto;
+package com.zhxp.web.dto;
 
 /**
  * Created by zhu on 2017/3/28.

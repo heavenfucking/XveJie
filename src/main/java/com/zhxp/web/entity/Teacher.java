@@ -13,7 +13,7 @@ public class Teacher {
 
     private Integer sex;
 
-    private Integer department;
+    private String department;
 
     private String password;
 
@@ -52,11 +52,11 @@ public class Teacher {
         this.sex = sex;
     }
 
-    public Integer getDepartment() {
+    public String getDepartment() {
         return department;
     }
 
-    public void setDepartment(Integer department) {
+    public void setDepartment(String department) {
         this.department = department;
     }
 

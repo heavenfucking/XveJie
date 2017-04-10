@@ -18,4 +18,6 @@ public interface StudentMapper {
 
    Integer delete(Integer id);
 
+   Student selectByNo(String no);
+
 }

@@ -20,6 +20,8 @@ public interface App {
         /** 所有接口异常情况时返回的MSG值 */
         public static final String API_RESULT_MSG_FOR_FAIL = "系统繁忙，请稍后再试";
 
+
+
     }
 
     class SessionExceptionCode{
@@ -32,6 +34,12 @@ public interface App {
     }
 
     class Session{
-        public static final String SESSION_USER_LOGIN_KEY = "session_user_login_key";
+
+        /** 用户登陆session存储键 */
+        public static final String SESSION_USER_LOGIN_OBJ_KEY = "session_user_login_obj_key";
+
+        /** 用户登陆类型  1 学生登录 2 教师登录 2 管理员登陆 */
+        public static final String SESSION_USER_LOGIN_TYPE_KEY ="session_user_login_type_key";
+
     }
 }

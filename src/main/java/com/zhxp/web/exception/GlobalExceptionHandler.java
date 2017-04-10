@@ -1,13 +1,11 @@
 package com.zhxp.web.exception;
 
 import com.zhxp.common.consts.App;
-import com.zhxp.web.controller.dto.ResultDto;
+import com.zhxp.web.dto.ResultDto;
 import org.apache.log4j.Logger;
 import org.springframework.web.bind.annotation.ControllerAdvice;
 import org.springframework.web.bind.annotation.ExceptionHandler;
 import org.springframework.web.bind.annotation.ResponseBody;
-
-import javax.management.RuntimeErrorException;
 import javax.servlet.http.HttpServletRequest;
 
 /**
@@ -41,6 +39,7 @@ public class GlobalExceptionHandler {
     @ExceptionHandler(value = Exception.class)
     @ResponseBody
     public ResultDto runErrorHangde(HttpServletRequest request, Exception e){
+        e.printStackTrace();
         logger.error(e.getMessage());
         return new ResultDto(App.ResponseCode.API_RESULT_CODE_FOR_FAIL ,e.getMessage());
     }

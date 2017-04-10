@@ -35,4 +35,6 @@ public class StudentService {
     public Integer updateStudent(Student student){
         return studentMapper.update(student);
     }
+
+
 }

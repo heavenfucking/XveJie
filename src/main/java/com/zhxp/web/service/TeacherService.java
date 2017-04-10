@@ -1,7 +1,7 @@
 package com.zhxp.web.service;
 
 import com.zhxp.common.consts.App;
-import com.zhxp.web.controller.dto.ResultDto;
+import com.zhxp.web.dto.ResultDto;
 import com.zhxp.web.entity.Page;
 import com.zhxp.web.entity.Teacher;
 import com.zhxp.web.mapper.TeacherMapper;
@@ -60,6 +60,14 @@ public class TeacherService {
     public ResultDto update(Teacher teacher){
         teacherMapper.update(teacher);
         return new ResultDto(App.ResponseCode.API_RESULT_CODE_FOR_SUCCEES, App.ResponseCode.API_RESULT_MSG_FOR_SUCCEES);
+    }
+
+    /**
+     *
+     * @return
+     */
+    public ResultDto getNoAndName(){
+        return new ResultDto(App.ResponseCode.API_RESULT_CODE_FOR_SUCCEES, teacherMapper.getNoAndName());
     }
 
 }

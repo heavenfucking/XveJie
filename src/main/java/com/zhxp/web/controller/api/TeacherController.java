@@ -1,7 +1,7 @@
 package com.zhxp.web.controller.api;
 
 import com.zhxp.common.consts.Url;
-import com.zhxp.web.controller.dto.ResultDto;
+import com.zhxp.web.dto.ResultDto;
 import com.zhxp.web.entity.Teacher;
 import com.zhxp.web.service.TeacherService;
 import io.swagger.annotations.Api;
@@ -46,5 +46,11 @@ public class TeacherController {
     @RequestMapping(value= Url.TeacherAPI.LIST_TEACHER_URL, method= RequestMethod.POST)
     public ResultDto getStudentList(@ApiParam("页码") @RequestParam(defaultValue = "1") Integer pageNo) {
         return teacherService.getList(pageNo);
+    }
+
+    @ApiOperation(value="获取教师编号和姓名", notes="获取教师编号和姓名")
+    @RequestMapping(value= Url.TeacherAPI.MAP_TEACHER_URL, method= RequestMethod.GET)
+    public ResultDto getNoAndName() {
+        return teacherService.getNoAndName();
     }
 }

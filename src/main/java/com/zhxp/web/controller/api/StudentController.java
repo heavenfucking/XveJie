@@ -3,14 +3,11 @@ package com.zhxp.web.controller.api;
 
 import com.zhxp.common.consts.App;
 import com.zhxp.common.consts.Url;
-import com.zhxp.web.controller.dto.ResultDto;
+import com.zhxp.web.dto.ResultDto;
 import com.zhxp.web.entity.Page;
 import com.zhxp.web.entity.Student;
-import com.zhxp.web.entity.User;
 import com.zhxp.web.service.StudentService;
 import io.swagger.annotations.*;
-import org.apache.coyote.Request;
-import org.apache.log4j.Logger;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.http.MediaType;
 import org.springframework.web.bind.annotation.*;
@@ -39,7 +36,7 @@ public class StudentController {
     @RequestMapping(value=Url.StudentAPI.DEL_STUDENT_URL, method= RequestMethod.GET)
     public ResultDto deleteStudent(@ApiParam("唯一标识") @RequestParam Integer id) {
         studentService.deleteStudent(id);
-        return new ResultDto(App.ResponseCode.API_RESULT_CODE_FOR_SUCCEES, id);
+        return new ResultDto(App.ResponseCode.API_RESULT_CODE_FOR_SUCCEES, "删除成功");
     }
 
     @ApiOperation(value="更新", notes="根据Student对象更新学生信息")
@@ -47,7 +44,7 @@ public class StudentController {
     @RequestMapping(value=Url.StudentAPI.UPDATE_STUDENT_URL, method= RequestMethod.POST)
     public ResultDto updateStudent(@RequestBody Student student) {
         studentService.updateStudent(student);
-        return new ResultDto(App.ResponseCode.API_RESULT_CODE_FOR_SUCCEES, student);
+        return new ResultDto(App.ResponseCode.API_RESULT_CODE_FOR_SUCCEES, "更新成功");
     }
 
     @ApiOperation(value="获取学生列表", notes="根据页号获取学生列表")

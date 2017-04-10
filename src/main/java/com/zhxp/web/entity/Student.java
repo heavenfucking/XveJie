@@ -13,9 +13,9 @@ public class Student {
 
     private Integer sex;
 
-    private Integer department;
+    private String department;
 
-    private Integer _class;
+    private String _class;
 
     private String password;
 
@@ -54,19 +54,19 @@ public class Student {
         this.sex = sex;
     }
 
-    public Integer getDepartment() {
+    public String getDepartment() {
         return department;
     }
 
-    public void setDepartment(Integer department) {
+    public void setDepartment(String department) {
         this.department = department;
     }
 
-    public Integer get_class() {
+    public String get_class() {
         return _class;
     }
 
-    public void set_class(Integer _class) {
+    public void set_class(String _class) {
         this._class = _class;
     }
 

@@ -6,12 +6,11 @@
 		<result column="no" property="no" jdbcType="VARCHAR"/>
 		<result column="name" property="name" jdbcType="VARCHAR"/>
 		<result column="sex" property="sex" jdbcType="INTEGER"/>
-		<result column="department" property="department" jdbcType="INTEGER"/>
+		<result column="department" property="department" jdbcType="VARCHAR"/>
 		<result column="pwd" property="password" jdbcType="VARCHAR"/>
 	</resultMap>
 	<sql id="Base_Colmmn_List">
 		id, no, name, sex, department, pwd
-
 	</sql>
 	<!-- findAll -->
 	<select id="selectByPage" resultMap="BaseResultMap">
@@ -54,7 +53,7 @@
 				#{sex, jdbcType=INTEGER},
 			</if>
 			<if test="department!=null">
-				#{department, jdbcType=INTEGER},
+				#{department, jdbcType=VARCHAR},
 			</if>
 			<if test="password!=null">
 				#{password, jdbcType=VARCHAR},
@@ -75,7 +74,7 @@
 				sex = #{sex, jdbcType=INTEGER},
 			</if>
 			<if test="department!=null">
-				department = #{department, jdbcType=INTEGER},
+				department = #{department, jdbcType=VARCHAR},
 			</if>
 			<if test="password!=null">
 				pwd = #{password, jdbcType=VARCHAR},
@@ -90,5 +89,16 @@
 		delete from teacher_info where id = #{id, jdbcType=INTEGER}
 	</delete>
 
+	<select id="selectByNo" resultMap="BaseResultMap">
+		select
+		<include refid="Base_Colmmn_List"/>
+		from
+		teacher_info
+		WHERE
+		no = #{no, jdbcType = VARCHAR}
+	</select>
 
+	<select id="getNoAndName" resultType="java.util.HashMap">
+		select no,name from teacher_info
+	</select>
 </mapper>
