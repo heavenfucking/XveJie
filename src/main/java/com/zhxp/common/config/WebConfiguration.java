@@ -25,10 +25,9 @@ public class WebConfiguration extends WebMvcConfigurerAdapter {
                 .excludePathPatterns("/v2/**")
                 .excludePathPatterns("/resources/**")
                 .excludePathPatterns("/face/**")
-                .excludePathPatterns("/user/login");
+                .excludePathPatterns("/user/login")
+        ;
         super.addInterceptors(registry);
     }
-
-
 
 }

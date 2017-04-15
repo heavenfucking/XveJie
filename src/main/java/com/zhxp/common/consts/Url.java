@@ -49,6 +49,12 @@ public interface Url {
     class UserLoginAPI{
         /** 登录 */
         public static final String USER_LOGIN_URL = "user/login";
+
+        /** 用户个人信息  */
+        public static final String USER_INFO_URL = "user/userinfo";
+
+        /** 修改登录密码  */
+        public static final String USER_PWD_UPDATE_URL = "user/updatepassword";
     }
 
     /**
