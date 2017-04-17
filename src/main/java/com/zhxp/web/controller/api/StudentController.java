@@ -4,6 +4,7 @@ package com.zhxp.web.controller.api;
 import com.zhxp.common.consts.App;
 import com.zhxp.common.consts.Url;
 import com.zhxp.web.dto.ResultDto;
+import com.zhxp.web.dto.StudentDto;
 import com.zhxp.web.entity.Page;
 import com.zhxp.web.entity.Student;
 import com.zhxp.web.service.StudentService;
@@ -50,10 +51,17 @@ public class StudentController {
     @ApiOperation(value="获取学生列表", notes="根据页号获取学生列表")
     @RequestMapping(value= Url.StudentAPI.LIST_STUDENT_URL, method= RequestMethod.POST)
     public ResultDto getStudentList(@ApiParam("页码") @RequestParam(defaultValue = "1") Integer pageNo) {
-        Page<Student> page = new Page<>();
+        Page<StudentDto> page = new Page<>();
         page.setPageNo(pageNo);
-        List<Student> list = studentService.getStuddentList(page);
+        List<StudentDto> list = studentService.getStuddentList(page);
         page.setResults(list);
         return new ResultDto(App.ResponseCode.API_RESULT_CODE_FOR_SUCCEES, page);
+    }
+
+    @ApiOperation(value="获取学生信息", notes="根据id获取学生列表")
+    @ApiImplicitParam(name = "id",value = "学生唯一标识",  dataType = "int",paramType = "path")
+    @RequestMapping(value= Url.StudentAPI.LIST_STUDENT_INFO_URL, method= RequestMethod.GET)
+    public ResultDto getStudent(@PathVariable Integer id) {
+        return new ResultDto(App.ResponseCode.API_RESULT_CODE_FOR_SUCCEES, studentService.getStudentById(id));
     }
 }

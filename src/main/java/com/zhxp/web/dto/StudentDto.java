@@ -1,9 +1,9 @@
-package com.zhxp.web.entity;
+package com.zhxp.web.dto;
 
 /**
- * Created by zhu on 2017/3/28.
+ * Created by zhh on 2017/4/17.
  */
-public class Student {
+public class StudentDto {
 
     private Integer id;
 
@@ -13,11 +13,13 @@ public class Student {
 
     private Integer sex;
 
-    private Integer classId;
+    private String department;
+
+    private String className;
 
     private String password;
 
-    public Student() {
+    public StudentDto() {
     }
 
     public Integer getId() {
@@ -52,19 +54,27 @@ public class Student {
         this.sex = sex;
     }
 
+    public String getDepartment() {
+        return department;
+    }
+
+    public void setDepartment(String department) {
+        this.department = department;
+    }
+
+    public String getClassName() {
+        return className;
+    }
+
+    public void setClassName(String className) {
+        this.className = className;
+    }
+
     public String getPassword() {
         return password;
     }
 
     public void setPassword(String password) {
         this.password = password;
-    }
-
-    public Integer getClassId() {
-        return classId;
-    }
-
-    public void setClassId(Integer classId) {
-        this.classId = classId;
     }
 }

@@ -1,6 +1,7 @@
 package com.zhxp.web.service;
 
 
+import com.zhxp.web.dto.StudentDto;
 import com.zhxp.web.entity.Page;
 import com.zhxp.web.entity.Student;
 import com.zhxp.web.entity.User;
@@ -20,7 +21,7 @@ public class StudentService {
     @Autowired
     private StudentMapper studentMapper;
 
-    public List<Student> getStuddentList(Page page){
+    public List<StudentDto> getStuddentList(Page page){
         return studentMapper.getStudentList(page);
     }
 
@@ -36,5 +37,7 @@ public class StudentService {
         return studentMapper.update(student);
     }
 
-
+    public Student getStudentById(Integer id){
+        return studentMapper.selectById(id);
+    }
 }

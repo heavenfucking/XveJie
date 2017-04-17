@@ -1,6 +1,7 @@
 package com.zhxp.web.service;
 
 import com.zhxp.common.consts.App;
+import com.zhxp.web.dto.CourseDto;
 import com.zhxp.web.dto.ResultDto;
 import com.zhxp.web.entity.Course;
 import com.zhxp.web.entity.Page;
@@ -21,9 +22,6 @@ public class CourseService {
     @Autowired
     private CourseMapper courseMapper;
 
-    @Autowired
-    private TeacherMapper teacherMapper;
-
     public ResultDto add(Course course){
         courseMapper.insert(course);
         return new ResultDto(App.ResponseCode.API_RESULT_CODE_FOR_SUCCEES, App.ResponseCode.API_RESULT_MSG_FOR_SUCCEES);
@@ -40,11 +38,14 @@ public class CourseService {
     }
 
     public ResultDto list(Integer pageNo) {
-        Page<Course> page = new Page<>();
+        Page<CourseDto> page = new Page<>();
         page.setPageNo(pageNo);
-        List<Course> list = courseMapper.getCourseList(page);
-        list.forEach(m->m.setTeacher(teacherMapper.selectByNo(m.getTeacherId())));
+        List<CourseDto> list = courseMapper.getCourseList(page);
         page.setResults(list);
         return new ResultDto(App.ResponseCode.API_RESULT_CODE_FOR_SUCCEES, page);
+    }
+
+    public ResultDto getCourseInfoById(Integer id){
+        return new ResultDto(App.ResponseCode.API_RESULT_CODE_FOR_SUCCEES, courseMapper.selectCourseInfoById(id));
     }
 }

@@ -10,10 +10,7 @@ import io.swagger.annotations.ApiImplicitParam;
 import io.swagger.annotations.ApiOperation;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.http.MediaType;
-import org.springframework.web.bind.annotation.RequestBody;
-import org.springframework.web.bind.annotation.RequestMapping;
-import org.springframework.web.bind.annotation.RequestMethod;
-import org.springframework.web.bind.annotation.RestController;
+import org.springframework.web.bind.annotation.*;
 
 /**
  * Created by zhu on 2017/4/5.
@@ -50,5 +47,12 @@ public class CourseController {
     @RequestMapping(value = Url.CourseAPI.LIST_COURSE_URL, method = RequestMethod.POST)
     public ResultDto list(Integer pageNo){
         return courseService.list(pageNo);
+    }
+
+    @ApiOperation(value = "根据id查询", notes = "根据id查询课程信息")
+    @ApiImplicitParam(name = "id",value = "课程唯一标识",  dataType = "int",paramType = "path")
+    @RequestMapping(value = Url.CourseAPI.LIST_COURSE_INFO_URL, method = RequestMethod.GET)
+    public ResultDto getCourseInfoById(@PathVariable Integer id){
+        return courseService.getCourseInfoById(id);
     }
 }

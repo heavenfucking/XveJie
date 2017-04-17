@@ -1,5 +1,6 @@
 package com.zhxp.web.mapper;
 
+import com.zhxp.web.dto.StudentDto;
 import com.zhxp.web.entity.Page;
 import com.zhxp.web.entity.Student;
 
@@ -10,7 +11,7 @@ import java.util.List;
  */
 public interface StudentMapper {
 
-   List<Student> getStudentList(Page page);
+   List<StudentDto> getStudentList(Page page);
 
    Integer insert(Student student);
 
@@ -19,5 +20,7 @@ public interface StudentMapper {
    Integer delete(Integer id);
 
    Student selectByNo(String no);
+
+   Student selectById(Integer id);
 
 }

@@ -1,5 +1,6 @@
 package com.zhxp.web.mapper;
 
+import com.zhxp.web.dto.CourseDto;
 import com.zhxp.web.entity.Course;
 import com.zhxp.web.entity.Page;
 
@@ -16,7 +17,8 @@ public interface CourseMapper {
 
     Integer update(Course course);
 
-    List<Course> getCourseList(Page page);
+    List<CourseDto> getCourseList(Page page);
 
+    Course selectCourseInfoById(Integer id);
 
 }

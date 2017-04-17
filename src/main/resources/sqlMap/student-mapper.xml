@@ -3,24 +3,30 @@
 <mapper namespace="com.zhxp.web.mapper.StudentMapper">
 	<resultMap id="BaseResultMap" type="com.zhxp.web.entity.Student">
 		<id column="id" property="id" jdbcType="INTEGER"/>
-		<result column="stu_no" property="no" jdbcType="VARCHAR"/>
-		<result column="stu_name" property="name" jdbcType="VARCHAR"/>
-		<result column="stu_sex" property="sex" jdbcType="INTEGER"/>
-		<result column="stu_department" property="department" jdbcType="VARCHAR"/>
-		<result column="stu_class" property="_class" jdbcType="VARCHAR"/>
-		<result column="stu_pwd" property="password" jdbcType="VARCHAR"/>
+		<result column="no" property="no" jdbcType="VARCHAR"/>
+		<result column="name" property="name" jdbcType="VARCHAR"/>
+		<result column="sex" property="sex" jdbcType="INTEGER"/>
+		<result column="classId" property="classId" jdbcType="INTEGER"/>
+		<result column="pwd" property="password" jdbcType="VARCHAR"/>
 	</resultMap>
 	<sql id="Base_Colmmn_List">
-		id, stu_name, stu_no, stu_sex, stu_department, stu_class, stu_pwd
+		id, name, no, sex, classId, pwd
 	</sql>
+
 	<!-- findAll -->
-	<select id="getStudentList" resultMap="BaseResultMap">
+	<select id="getStudentList" resultType="com.zhxp.web.dto.StudentDto">
 		select
-		     <include refid="Base_Colmmn_List"/>
+		   stu.id as id,
+		   stu.name as name,
+		   stu.no as no,
+		   stu.sex as sex,
+		   cla.department as department,
+		   concat(cla.name,'(', cla.enter_time, ')') as className,
+		   pwd as password
 		from
-		    student_info
+		    student_info stu inner join class_info cla on cla.id = stu.classId
 		order by
-		   id
+		   stu.id
 		desc
 	</select>
 
@@ -28,22 +34,19 @@
 		insert into student_info
 		<trim prefix="(" suffix=")" suffixOverrides=",">
 			<if test="no!=null">
-				stu_no,
+				no,
 			</if>
 			<if test="name!=null">
-				stu_name,
+				name,
 			</if>
 			<if test="sex!=null">
-				stu_sex,
+				sex,
 			</if>
-			<if test="department!=null">
-				stu_department,
-			</if>
-			<if test="_class!=null">
-				stu_class,
+			<if test="classId!=null">
+				classId,
 			</if>
 			<if test="password!=null">
-				stu_pwd,
+				pwd,
 			</if>
 		</trim>
 		<trim prefix="values (" suffix=")" suffixOverrides=",">
@@ -56,11 +59,8 @@
 			<if test="sex!=null">
 				#{sex, jdbcType=INTEGER},
 			</if>
-			<if test="department!=null">
-				#{department, jdbcType=VARCHAR},
-			</if>
-			<if test="_class!=null">
-				#{_class, jdbcType=VARCHAR},
+			<if test="classId!=null">
+				#{classId, jdbcType=INTEGER},
 			</if>
 			<if test="password!=null">
 				#{password, jdbcType=VARCHAR},
@@ -72,22 +72,19 @@
 		update student_info
 		<set>
 			<if test="no!=null">
-				stu_no = #{no, jdbcType=VARCHAR},
+				no = #{no, jdbcType=VARCHAR},
 			</if>
 			<if test="name!=null">
-				stu_name = #{name, jdbcType=VARCHAR},
+				name = #{name, jdbcType=VARCHAR},
 			</if>
 			<if test="sex!=null">
-				stu_sex = #{sex, jdbcType=INTEGER},
+				sex = #{sex, jdbcType=INTEGER},
 			</if>
-			<if test="department!=null">
-				stu_department = #{department, jdbcType=INTEGER},
-			</if>
-			<if test="_class!=null">
-				stu_class = #{_class, jdbcType=INTEGER},
+			<if test="classId!=null">
+				classId = #{classId, jdbcType=INTEGER},
 			</if>
 			<if test="password!=null">
-				stu_pwd = #{password, jdbcType=VARCHAR},
+				pwd = #{password, jdbcType=VARCHAR},
 			</if>
 		</set>
 		where
@@ -105,10 +102,18 @@
 		from
 		  student_info
 		WHERE
-		  stu_no = #{no, jdbcType = VARCHAR}
+		  no = #{no, jdbcType = VARCHAR}
 		limit 1
 	</select>
 
-	
+	<select id="selectById" resultMap="BaseResultMap">
+		select
+		<include refid="Base_Colmmn_List"/>
+		from
+		student_info
+		WHERE
+		   id = #{id, jdbcType = INTEGER}
+		limit 1
+	</select>
 
 </mapper>

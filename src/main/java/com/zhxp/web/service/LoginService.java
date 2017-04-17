@@ -83,14 +83,14 @@ public class LoginService {
             Student  userObj  = (Student) hs.getAttribute(App.Session.SESSION_USER_LOGIN_OBJ_KEY);
             userObj.setPassword(password);
             studentMapper.update(userObj);
-            hs.setAttribute(App.Session.SESSION_USER_LOGIN_TYPE_KEY, userObj);
+            hs.setAttribute(App.Session.SESSION_USER_LOGIN_OBJ_KEY, userObj);
             return new ResultDto(App.ResponseCode.API_RESULT_CODE_FOR_SUCCEES, App.ResponseCode.API_RESULT_MSG_FOR_SUCCEES);
         }
         if(type==2){
             Teacher  userObj  = (Teacher) hs.getAttribute(App.Session.SESSION_USER_LOGIN_OBJ_KEY);
             userObj.setPassword(password);
             teacherMapper.update(userObj);
-            hs.setAttribute(App.Session.SESSION_USER_LOGIN_TYPE_KEY, userObj);
+            hs.setAttribute(App.Session.SESSION_USER_LOGIN_OBJ_KEY, userObj);
             return new ResultDto(App.ResponseCode.API_RESULT_CODE_FOR_FAIL, App.ResponseCode.API_RESULT_MSG_FOR_FAIL);
         }
         return new ResultDto(App.ResponseCode.API_RESULT_CODE_FOR_FAIL, App.ResponseCode.API_RESULT_MSG_FOR_FAIL);

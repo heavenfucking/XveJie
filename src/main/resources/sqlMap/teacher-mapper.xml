@@ -99,6 +99,6 @@
 	</select>
 
 	<select id="getNoAndName" resultType="java.util.HashMap">
-		select no,name from teacher_info
+		select id,name from teacher_info
 	</select>
 </mapper>

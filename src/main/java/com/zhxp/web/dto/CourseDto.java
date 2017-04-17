@@ -1,9 +1,10 @@
-package com.zhxp.web.entity;
+package com.zhxp.web.dto;
+
 
 /**
- * Created by zhu on 2017/4/5.
+ * Created by zhh on 2017/4/16.
  */
-public class Course {
+public class CourseDto {
 
     private Integer id;
 
@@ -11,15 +12,15 @@ public class Course {
 
     private String name;
 
-    private Integer teacherId;
+    private String teacherName;
 
-    private Integer classId;
+    private String className;
 
     private Integer openStudentEvaluate;
 
     private Integer openTeacherEvaluate;
 
-    public Course() {
+    public CourseDto() {
     }
 
     public Integer getId() {
@@ -46,20 +47,20 @@ public class Course {
         this.name = name;
     }
 
-    public Integer getTeacherId() {
-        return teacherId;
+    public String getTeacherName() {
+        return teacherName;
     }
 
-    public void setTeacherId(Integer teacherId) {
-        this.teacherId = teacherId;
+    public void setTeacherName(String teacherName) {
+        this.teacherName = teacherName;
     }
 
-    public Integer getClassId() {
-        return classId;
+    public String getClassName() {
+        return className;
     }
 
-    public void setClassId(Integer classId) {
-        this.classId = classId;
+    public void setClassName(String className) {
+        this.className = className;
     }
 
     public Integer getOpenStudentEvaluate() {

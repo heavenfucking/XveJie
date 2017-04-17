@@ -1,0 +1,71 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd" >
+<mapper namespace="com.zhxp.web.mapper.ClassInfoMapper">
+	<resultMap id="BaseResultMap" type="com.zhxp.web.entity.ClassInfo">
+		<id column="id" property="id" jdbcType="INTEGER"/>
+		<result column="name" property="name" jdbcType="VARCHAR"/>
+		<result column="department" property="department" jdbcType="VARCHAR"/>
+		<result column="enter_time" property="enterTime" jdbcType="VARCHAR"/>
+	</resultMap>
+
+	<sql id="Base_Colmmn_List">
+		id, name, department, enter_time
+	</sql>
+
+	<insert id="insert" parameterType="com.zhxp.web.entity.ClassInfo">
+		insert into class_info
+		<trim prefix="(" suffix=")" suffixOverrides=",">
+			<if test="name!=null">
+				name,
+			</if>
+			<if test="department!=null">
+				department,
+			</if>
+			<if test="enterTime!=null">
+				enterTime,
+			</if>
+		</trim>
+		<trim prefix="values (" suffix=")" suffixOverrides=",">
+			<if test="name!=null">
+				#{name, jdbcType=VARCHAR},
+			</if>
+			<if test="department!=null">
+				#{department, jdbcType=VARCHAR},
+			</if>
+			<if test="enterTime!=null">
+				#{enterTime, jdbcType=VARCHAR},
+			</if>
+		</trim>
+	</insert>
+
+	<update id="update" parameterType="com.zhxp.web.entity.ClassInfo">
+		update class_info
+		<set>
+			<if test="name!=null">
+				name = #{name, jdbcType=VARCHAR},
+			</if>
+			<if test="department!=null">
+				department = #{department, jdbcType=VARCHAR},
+			</if>
+			<if test="enterTime!=null">
+				enterTime = #{enterTime, jdbcType=VARCHAR},
+			</if>
+		</set>
+		where
+		   id = #{id, jdbcType=INTEGER}
+	</update>
+
+	<delete id="delete">
+		delete from class_info where id = #{id, jdbcType=INTEGER}
+	</delete>
+
+	<select id="selectClassNameAndId" resultType="java.util.HashMap">
+		select
+		   id as id,
+		   concat(name,'(', enter_time, ')') as name
+		from
+		   class_info
+	</select>
+
+
+</mapper>

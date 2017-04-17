@@ -10,7 +10,6 @@ import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.http.MediaType;
 import org.springframework.web.bind.annotation.*;
 import javax.servlet.http.HttpServletRequest;
-import javax.servlet.http.HttpServletResponse;
 import javax.servlet.http.HttpSession;
 
 
@@ -34,15 +33,14 @@ public class LoginController {
 	public ResultDto login(@ApiParam("登录类型 1 学生登录, 2 教师登录, 3 管理员登录") @RequestParam String type,
 						   @ApiParam("用户名") @RequestParam String username,
 						   @ApiParam("密码") @RequestParam String password,
-						   HttpServletRequest request,
-						   HttpServletResponse response) {
+						   HttpServletRequest request) {
 		return loginService.login(Integer.valueOf(type), username, password, request);
 	}
 
 	/**
 	 * 用户信息
 	 * @param request
-	 * @return
+	 * @retu
      */
 	@ApiOperation(value="用户个人信息", notes="用户个人信息", produces = MediaType.APPLICATION_JSON_VALUE)
 	@RequestMapping(value= Url.UserLoginAPI.USER_INFO_URL, method= RequestMethod.POST)
@@ -53,6 +51,12 @@ public class LoginController {
 		return new ResultDto(App.ResponseCode.API_RESULT_CODE_FOR_SUCCEES, new UserDto(userType, userObj));
 	}
 
+	/**
+	 * 修改登录密码
+	 * @param password
+	 * @param request
+     * @return
+     */
 	@ApiOperation(value="修改登录密码", notes="修改登录密码", produces = MediaType.APPLICATION_JSON_VALUE)
 	@RequestMapping(value= Url.UserLoginAPI.USER_PWD_UPDATE_URL, method= RequestMethod.POST)
 	public ResultDto updatePassword(@ApiParam("新密码") String password, HttpServletRequest request){

@@ -18,8 +18,11 @@ public interface Url {
         /** 修改 */
         public static final String UPDATE_STUDENT_URL = "student/update";
 
-        /** 查询*/
+        /** 分页 */
         public static final String LIST_STUDENT_URL = "student/list";
+
+        /** 查询 */
+        public static final String LIST_STUDENT_INFO_URL = "student/info/{id}";
     }
 
     /**
@@ -71,8 +74,30 @@ public interface Url {
         /** 修改 */
         public static final String UPDATE_COURSE_URL = "course/update";
 
-        /** 查询*/
+        /** 列表*/
         public static final String LIST_COURSE_URL = "course/list";
+
+        /** 查询*/
+        public static final String LIST_COURSE_INFO_URL = "course/info/{id}";
+    }
+
+    /**
+     * EvaluateInfo 增删该查接口
+     */
+    class EvaluateAPI{
+        /**
+         * 跟据类型获取评价指标
+         */
+        public static final String LIST_EVALUATE_BY_TYPE = "evaluate/type/";
+    }
+
+    /**
+     * ClassInfo增删改接口
+     */
+    class ClassInfoAPI{
+
+        /** 班级名 */
+        public static final String LIST_COURSE_URL = "classinfo/name";
     }
 
 }
