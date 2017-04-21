@@ -23,4 +23,6 @@ public interface StudentMapper {
 
    Student selectById(Integer id);
 
+   List<Integer> getIdByClassId(Integer classId);
+
 }

@@ -116,4 +116,13 @@
 		limit 1
 	</select>
 
+	<select id="getIdByClassId" resultType="java.lang.Integer">
+		select
+		   id
+		from
+		   student_info
+		where
+		   classId = #{classId, jdbcType=INTEGER}
+	</select>
+
 </mapper>

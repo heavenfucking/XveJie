@@ -86,9 +86,18 @@ public interface Url {
      */
     class EvaluateAPI{
         /**
+         * 主页列表
+         */
+        public static final String LIST_EVALUATE_OF_HOME = "evaluate/home";
+        /**
          * 跟据类型获取评价指标
          */
-        public static final String LIST_EVALUATE_BY_TYPE = "evaluate/type/";
+        public static final String LIST_EVALUATE_QUOTA = "evaluate/quota";
+
+        /**
+         * 开启（关闭）评价
+         */
+        public static final String ON_OR_OFF_EVALUATE = "evaluate/operate";
     }
 
     /**

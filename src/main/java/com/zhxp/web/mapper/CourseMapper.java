@@ -3,6 +3,7 @@ package com.zhxp.web.mapper;
 import com.zhxp.web.dto.CourseDto;
 import com.zhxp.web.entity.Course;
 import com.zhxp.web.entity.Page;
+import org.apache.ibatis.annotations.Param;
 
 import java.util.List;
 
@@ -20,5 +21,7 @@ public interface CourseMapper {
     List<CourseDto> getCourseList(Page page);
 
     Course selectCourseInfoById(Integer id);
+
+    Integer setEvaluate(@Param(value = "id")Integer id, @Param(value = "type")Integer type, @Param(value = "status")Integer status);
 
 }

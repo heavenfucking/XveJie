@@ -16,9 +16,9 @@ public class SessionLoginInterceptor extends HandlerInterceptorAdapter {
     @Override
     public boolean preHandle(HttpServletRequest request, HttpServletResponse response, Object o) throws Exception {
         Object obj = request.getSession().getAttribute(App.Session.SESSION_USER_LOGIN_OBJ_KEY);
-//        if(!request.getMethod().equals("OPTIONS") && obj==null)
-//           throw new SessionException("未登录");
-//        System.out.println(request.getMethod()+" "+request.getSession().getId());
+        if(!request.getMethod().equals("OPTIONS") && obj==null)
+           throw new SessionException("未登录");
+        //System.out.println(request.getMethod()+" "+request.getSession().getId());
         return true;
     }
 }

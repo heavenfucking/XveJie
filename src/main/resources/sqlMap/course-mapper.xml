@@ -122,6 +122,20 @@
 		   id = #{id, jdbcType=INTEGER}
 	</select>
 
+	<update id="setEvaluate" parameterType="java.lang.Integer">
+		update
+		    Course_info
+		<set>
+		  <if test="type==1">
+			  open_student_evaluate = #{status, jdbcType=INTEGER}
+		  </if>
+		  <if test="type==2">
+			  open_teacher_evaluate = #{status, jdbcType=INTEGER}
+		  </if>
+		</set>
+		where
+		   id = #{id, jdbcType=INTEGER}
+	</update>
 	
 
 </mapper>
