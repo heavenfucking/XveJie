@@ -20,4 +20,7 @@ public interface EvaluateRecordMapper {
 
     List<Map<String, String>> selectStudentEvalluateRecord(Page page);
 
+    Integer setComplete(@Param(value = "status") Integer status,
+                        @Param(value = "id") Integer id);
+
 }

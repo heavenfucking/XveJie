@@ -92,12 +92,14 @@ public interface Url {
         /**
          * 跟据类型获取评价指标
          */
-        public static final String LIST_EVALUATE_QUOTA = "evaluate/quota";
-
+        public static final String LIST_EVALUATE_QUOTA = "evaluate/quota/{recordId}";
         /**
          * 开启（关闭）评价
          */
         public static final String ON_OR_OFF_EVALUATE = "evaluate/operate";
+
+
+        public static final String UPDATE_EVALUATE_RESULT = "evaluateresult/update";
     }
 
     /**

@@ -64,8 +64,10 @@ public class LoginService {
             return new ResultDto(App.ResponseCode.API_RESULT_CODE_FOR_SUCCEES, new UserDto(2, teacher));
         }
         if(type==3){
-            request.getSession().setAttribute(App.Session.SESSION_USER_LOGIN_OBJ_KEY, new String());
-            return new ResultDto(App.ResponseCode.API_RESULT_CODE_FOR_SUCCEES, request.getSession().getId());
+            Teacher teacher = new Teacher();
+            teacher.setName("管理员");
+            request.getSession().setAttribute(App.Session.SESSION_USER_LOGIN_OBJ_KEY, teacher);
+            return new ResultDto(App.ResponseCode.API_RESULT_CODE_FOR_SUCCEES, new UserDto(3, teacher));
         }
         return new ResultDto(App.ResponseCode.API_RESULT_CODE_FOR_FAIL, "错误");
     }

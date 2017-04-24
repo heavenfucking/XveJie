@@ -34,13 +34,16 @@ public class EvaluateService {
     @Autowired
     private TeacherMapper teacherMapper;
 
+    @Autowired
+    private EvaluateResultMapper evaluateResultMapper;
+
     /**
      * 跟据类型获取评价指标
      * @param type
      * @return
      */
-    public ResultDto getEvaluateByType(Integer type){
-        return new ResultDto(App.ResponseCode.API_RESULT_CODE_FOR_SUCCEES, evaluateInfoMapper.selectByType(type));
+    public ResultDto getEvaluateByType(Integer type, Integer targetId, Integer recordId){
+        return new ResultDto(App.ResponseCode.API_RESULT_CODE_FOR_SUCCEES, evaluateInfoMapper.selectByTypeAndRecordId(type, targetId, recordId));
     }
 
     /**
@@ -69,12 +72,25 @@ public class EvaluateService {
             {
                 evaluateRecord = new EvaluateRecord(type, targetId, id, 0, DateUtils.getCurTime());
                 evaluateRecordMapper.insert(evaluateRecord);
+                List<Integer> list1 = evaluateInfoMapper.selectPrimaryIdByType(type);
+                Integer recordId = evaluateRecord.getId();
+                list1.forEach((evaluateId)->{
+                    evaluateResultMapper.insert(new EvaluateResult(evaluateId, null, recordId));
+                });
             }
 
         });
         return new ResultDto(App.ResponseCode.API_RESULT_CODE_FOR_SUCCEES, App.ResponseCode.API_RESULT_MSG_FOR_SUCCEES);
     }
 
+    /**
+     * 我的评价列表
+     * @param pageNo
+     * @param isComplete
+     * @param targetId
+     * @param type
+     * @return
+     */
     public ResultDto selectStudentEvalluateRecord(Integer pageNo, Integer isComplete, Integer targetId, Integer type){
         Page<Map<String, String>> page = new Page<>();
         page.setPageSize(10);
@@ -86,5 +102,19 @@ public class EvaluateService {
         page.setParams(map);
         page.setResults(evaluateRecordMapper.selectStudentEvalluateRecord(page));
         return new ResultDto(App.ResponseCode.API_RESULT_CODE_FOR_SUCCEES, page);
+    }
+
+    /**
+     * 更新EvaluateResult
+     * @param evaluateResult
+     * @return
+     */
+    public ResultDto updateEvaluateResult(EvaluateResult evaluateResult, Integer type){
+        evaluateResultMapper.update(evaluateResult);
+        if(evaluateInfoMapper.getCountByType(type).equals(evaluateResultMapper.getCountByRecordId(evaluateResult.getRecordId())))
+        {
+            evaluateRecordMapper.setComplete(1,evaluateResult.getRecordId());
+        }
+        return new ResultDto(App.ResponseCode.API_RESULT_CODE_FOR_SUCCEES, App.ResponseCode.API_RESULT_MSG_FOR_SUCCEES);
     }
 }
