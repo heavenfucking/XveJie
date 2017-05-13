@@ -23,4 +23,7 @@ public interface EvaluateRecordMapper {
     Integer setComplete(@Param(value = "status") Integer status,
                         @Param(value = "id") Integer id);
 
+    Integer setContent( @Param(value = "id") Integer id,
+                        @Param(value = "content") String content);
+
 }

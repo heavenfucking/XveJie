@@ -117,4 +117,15 @@ public class EvaluateService {
         }
         return new ResultDto(App.ResponseCode.API_RESULT_CODE_FOR_SUCCEES, App.ResponseCode.API_RESULT_MSG_FOR_SUCCEES);
     }
+
+    /**
+     * 学生留言
+     * @param id
+     * @param content
+     * @return
+     */
+    public ResultDto liuYan(Integer id, String content){
+        evaluateRecordMapper.setContent(id, content);
+        return new ResultDto(App.ResponseCode.API_RESULT_CODE_FOR_SUCCEES, App.ResponseCode.API_RESULT_MSG_FOR_SUCCEES);
+    }
 }

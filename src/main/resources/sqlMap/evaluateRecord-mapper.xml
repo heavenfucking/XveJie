@@ -85,4 +85,8 @@
            id = #{id, jdbcType=INTEGER}
 
     </update>
+
+    <update id="setContent">
+        update evaluate_record set content = #{content, jdbcType=VARCHAR} where id = #{id, jdbcType=INTEGER}
+    </update>
 </mapper>

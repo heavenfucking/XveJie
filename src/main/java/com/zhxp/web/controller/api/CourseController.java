@@ -13,7 +13,7 @@ import org.springframework.http.MediaType;
 import org.springframework.web.bind.annotation.*;
 
 /**
- * Created by zhu on 2017/4/5.
+ * Created by zhao on 2017/4/5.
  */
 @Api(value = "course", description = "课程API", produces = MediaType.APPLICATION_JSON_VALUE)
 @RestController

@@ -19,7 +19,7 @@ import java.util.Map;
 import java.util.Properties;
 
 /**
- * Created by zhu on 2017/3/21.
+ * Created by zhao on 2017/3/21.
  */
 @Configuration
 public class DruidConfiguration {

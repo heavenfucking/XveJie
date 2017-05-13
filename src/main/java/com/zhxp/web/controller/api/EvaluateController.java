@@ -7,6 +7,7 @@ import com.zhxp.web.dto.ResultDto;
 import com.zhxp.web.entity.*;
 import com.zhxp.web.service.EvaluateService;
 import io.swagger.annotations.*;
+import net.sf.json.JSONObject;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.http.MediaType;
 import org.springframework.web.bind.annotation.*;
@@ -29,7 +30,8 @@ public class EvaluateController extends BaseController{
     })
     @RequestMapping(value = Url.EvaluateAPI.LIST_EVALUATE_OF_HOME, method = RequestMethod.POST)
     public ResultDto homelist(Integer pageNo, @RequestBody SearchParam searchParam, HttpServletRequest request){
-        return evaluateService.selectStudentEvalluateRecord(pageNo, searchParam.getIsComplete(), getUserId(request), getUserType(request));
+        return evaluateService.selectStudentEvalluateRecord(pageNo, searchParam.getIsComplete(),
+                getUserId(request), getUserType(request));
     }
 
 
@@ -61,5 +63,11 @@ public class EvaluateController extends BaseController{
     public ResultDto updateEvaluateResult(@RequestBody EvaluateResult evaluateResult,
                                           HttpServletRequest request){
         return evaluateService.updateEvaluateResult(evaluateResult, getUserType(request));
+    }
+
+    @ApiOperation(value = "学生留言", notes = "学生留言")
+    @RequestMapping(value = "student/liuyan/{id}", method = RequestMethod.GET)
+    public ResultDto liuYan(@PathVariable Integer id, String content){
+        return evaluateService.liuYan(id, content);
     }
 }
